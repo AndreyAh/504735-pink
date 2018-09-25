@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Андрей  Ахраменко](https://up.htmlacademy.ru/adaptive/15/user/504735).
-* Наставник: `Неизвестно`.
+* Наставник: `Евгений Удод`.
 
 ---
 
