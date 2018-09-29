@@ -2,11 +2,134 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Пинк</title>
+    <title>Пинк</title>
   </head>
   <body>
+    <header class="page-header">
+      <div class="page-header__menu-wrapper">
+        <img class="page-header__logo-img" src="#" alt="Логотип PINK">
+        <button class="main-nav__toggle" type="button"><span class="visualy-hidden">Открыть меню</span></button>
+      </div>
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item--active"><a>Главная</a></li>
+          <li class="main-nav__item"><a href="#">Фотографии</a></li>
+          <li class="main-nav__item"><a href="#">Конкурс</a></li>
+          <li class="main-nav__item"><a href="">HTML Academy</a></li>
+        </ul>
+      </nav>
+      <div class="intro">
+        <h1 class="intro__title visualy-hidden">Приложение "PINK"</h1>
+        <p class="intro__picture">
+          <img  src="#" alt="Фото телефона в руке">
+        </p>
+        <div class="intro__wrapper">
+          <a href="https://www.apple.com/ru/itunes/" class="intro__button button"> Скачать приложение</a>
+          <ul class="intro__os-list">
+            <li class="intro__os-item intro__os-apple">
+              <a href="https://www.apple.com/ru/itunes/" class="intro__link">
+                <img src="#" alt="Иконка Apple">
+              </a>
+            </li>
+            <li class="intro__os-item intro__os-apple">
+              <a href="https://play.google.com/store" class="intro__link">
+                <img src="#" alt="Иконка Android">
+              </a>
+            </li>
+            <li class="intro__os-item intro__os-apple">
+              <a href="https://www.microsoft.com/ru-ru/store/b/home?rtc=1" class="intro__link">
+                <img src="#" alt="Иконка Windows">
+              </a>
+            </li>
+          </ul>
+          <p class="intro__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+        </div>
+      </div>
+    </header>
+    <main class="page-main">
+      <section class="info">
+        <h2 class="info__title">Устали от серости мегаполиса?</h2>
+        <p class="info__offer"> Нам есть, что вам предложить!</p>
+        <ul class="info__list">
+          <li class="info__item">
+            <h3 class="info__item--title">Поднимает настроение</h3>
+            <p class="info__item--text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+          </li>
+          <li class="info__item">
+            <h3 class="info__item--title">Меняет мир вокруг</h3>
+            <p class="info__item--text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+          </li>
+          <li class="info__item">
+            <h3 class="info__item--title">Заводит  новых друзей</h3>
+            <p class="info__item--text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+          </li>
+        </ul>
+        <img class="info__img" src="#" alt="Фото iphone">
+      </section>
+      <section class="reviews">
+        <div class="slider">
+          <h2 class="visualy-hidden">Отзывы о приложении</h2>
+          <div class="reviews__list slider__list">
+            <blockquote class="reviews__item slider__item">
+              <cite class="reviews__item--name">Николай Петров </cite>
+              <p class="reviews__item--text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в
+              комментариях к выложенной фотографии!»</p>
+            </blockquote>
+            <blockquote class="reviews__item slider__item">
+              <cite class="reviews__item--name">Николай Петров </cite>
+              <p class="reviews__item--text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в
+              комментариях к выложенной фотографии!»</p>
+            </blockquote>
+            <blockquote class="reviews__item slider__item">
+              <cite class="reviews__item--name">Николай Петров </cite>
+              <p class="reviews__item--text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в
+              комментариях к выложенной фотографии!»</p>
+            </blockquote>
+          </div>
+          <p class="reviews__toggles slider__toggles">
+            <button type="button" class="slider__toggle slider__toggle--active">1</button>
+            <button type="button" class="slider__toggle">2</button>
+            <button type="button" class="slider__toggle">3</button>
+          </p>
+        </div>
+      </section>
+      <section class="price">
+        <h2 class="visualy-hidden">Цены</h2>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Профессиональный HTML и CSS</a>», уровень 2.</p>
-
+        <table class="price__list slider">
+        </table>
+        <p class="price__toggles slider__toggles">
+          <button type="button" class="slider__toggle">1</button>
+          <button type="button" class="slider__toggle slider__toggle--active">2</button>
+          <button type="button" class="slider__toggle">3</button>
+        </p>
+      </section>
+      <section class="contacts">
+        <h2 class="contacts__title">Остались вопросы?<br>
+        Свяжитесь с нами!</h2>
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <b class="contacts__item--title">Звоните:</b><br>
+            <a class="contacts__item--data" href="tel:+78125556666">
+              +7 (812) 555-66-66
+            </a>
+          </li>
+          <li class="contacts__item">
+            <b class="contacts__item--title">Пишите:</b>
+            <a class="contacts__item--data" href="mail@htmlacademy.ru">
+              mail@htmlacademy.ru
+            </a>
+          </li>
+          <li class="contacts__item">
+            <b class="contacts__item--title">Приезжайте в гости:</b>
+            <p class="contacts__item--data">
+              ул. Большая <br>
+              Конюшенная, 19/8
+            </p>
+          </li>
+        </ul>
+        <img  src="#" alt="Карта">
+      </section>
+    </main>
   </body>
 </html>
