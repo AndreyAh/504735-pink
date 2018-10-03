@@ -1,0 +1,21 @@
+.reviews {
+  /*Временно для наглядности*/
+  outline: 2px solid yellow;
+  width: 320px;
+}
+
+.reviews__list {
+  @include list-default;
+}
+
+.reviews__item--name {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  color: $title-color;
+  font-style: normal;
+}
+
+.reviews__item--text {
+  line-height: 30px;
+}

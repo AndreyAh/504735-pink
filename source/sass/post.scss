@@ -1,0 +1,51 @@
+.post {
+  width: 320px;
+  outline: 3px dotted green;
+  background-color: $section-background;
+}
+
+.post__title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  background-color: $header-text-color;
+}
+
+.post__button {
+  background-color: transparent;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.post__post {
+  border: 3px solid $decor-color;
+  color: $decor-color;
+
+  &:hover,
+  &:focus {
+    background-color: $decor-color;
+    color: $header-text-color;
+  }
+
+  &:active {
+    color: rgba($header-text-color, 0.3%);
+  }
+}
+
+.post__cancel {
+  border: 3px solid rgba($base-color, 0.1%);
+  color: rgba($base-color, 0.1%);
+
+  &:hover,
+  &:focus {
+    border: 3px solid rgba($base-color, 0.3%);
+    color: rgba($base-color, 0.3%);
+  }
+
+  &:active {
+    background: rgba($base-color, 0.3%);
+    border: 3px solid rgba($base-color, 0%);
+  }
+}
