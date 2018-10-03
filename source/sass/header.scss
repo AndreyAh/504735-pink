@@ -1,0 +1,72 @@
+.page-header {
+  color: $header-text-color;
+  background: url("../img/bg-back-mobile@1x.jpg") center top no-repeat;
+  /*Непонятно, что с этим делать???*/
+  width: 320px;
+  outline: 3px solid yellow;
+}
+
+.page-header__menu-wrapper {
+  background-color: $header-color;
+  width: 320px;
+}
+
+
+.main-nav__list {
+  @include list-default;
+  background-color: $base-color;
+  width: 320px;
+}
+
+.main-nav__item a {
+  color: $header-text-color;
+  font-size: 18px;
+  line-height: 32px;
+  text-transform: uppercase;
+}
+
+.main-nav__item a[href] {
+  &:hover,
+  &:focus {
+    color: $decor-color;
+  }
+
+  &:active {
+    color: $decor-color;
+    opacity: 0.3;
+  }
+}
+
+.intro__title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 300;
+}
+
+.intro__wrapper {
+  background-color: $base-color;
+  width: 320px;
+}
+
+.intro__button {
+  font-weight: 700;
+  line-height: 21px;
+  color: $header-text-color;
+
+  &:hover {
+    background: $header-text-color;
+    color: $decor-color;
+  }
+
+  &:active {
+    color: rgba($decor-color, 0.7%);
+  }
+}
+
+.intro__os-list {
+  @include list-default;
+}
+
+.intro__text {
+  font-weight: 300;
+}

@@ -1,0 +1,65 @@
+.form {
+  font-size: 18px;
+  line-height: 30px;
+
+  fieldset {
+    border: none;
+  }
+  /*Временно*/
+  outline: 2px solid gray;
+  width: 320px;
+}
+
+.form__title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.form__label {
+  text-transform: uppercase;
+  color: $decor-color;
+  font-size: 14px;
+}
+
+.form__input {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.form__records {
+  background-color: $section-background;
+}
+
+.form__app-type {
+  background-color: $section-background;
+}
+
+.form__button {
+  background-color: $form-color;
+  color: $header-text-color;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+  border: none;
+
+  &:hover,
+  &:focus {
+    background-color: $form-color-hover;
+  }
+
+  &:active {
+    color: rgba($header-text-color, 0.3%);
+  }
+}
+
+.form__descript {
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.form__descript--star {
+  color: $decor-color;
+}

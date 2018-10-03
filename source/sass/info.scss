@@ -1,0 +1,25 @@
+.info {
+  background: $section-background url("../img/bg-triangle-white.svg") no-repeat center top;
+  /*Временно для наглядности*/
+  width: 320px;
+  outline: 3px dotted red;
+}
+
+.info__title,
+.info__offer {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 300;
+  text-align: center;/*лишнее*/
+}
+
+.info__list {
+  @include list-default;
+}
+
+.info__item--title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 10px;
+  color: $title-color;
+}
