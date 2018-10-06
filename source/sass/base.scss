@@ -3,9 +3,9 @@
   font-family: "Open Sans";
   font-style: normal;
   src: local("Open Sans Light"),
-    local("OpenSans-Light"),
-    url("../fonts/OpenSans-Light.woff2") format("woff2"),
-    url("../fonts/OpenSans-Light.woff") format("woff");
+    local("OpenSansLight"),
+    url("../fonts/OpenSansLight.woff2") format("woff2"),
+    url("../fonts/OpenSansLight.woff") format("woff");
 }
 
 @font-face {
@@ -23,20 +23,28 @@
   font-family: "Open Sans";
   font-style: normal;
   src: local("Open Sans Bold"),
-    local("OpenSans-Bold"),
-    url("../fonts/OpenSans-Bold.woff2") format("woff2"),
-    url("../fonts/OpenSans-Bold.woff") format("woff");
+    local("OpenSansBold"),
+    url("../fonts/OpenSansBold.woff2") format("woff2"),
+    url("../fonts/OpenSansBold.woff") format("woff");
 }
 
 body {
-  margin: 0;
-  margin-left: 300px;
+  margin: 0 auto;
   padding: 0;
+  max-width: 320px;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
   font-family: "Open Sans", "Arial", sans-serif;
   color: $base-color;
+}
+
+.container {
+  width: 280px;
+  margin: 0 auto;
+  padding: 0 20px;
+  /*Временно для сеток*/
+  outline: 1px dotted white;
 }
 
 img {
@@ -46,4 +54,30 @@ img {
 
 a {
   text-decoration: none;
+}
+
+@media (min-width: $tablet-width) {
+  body {
+    min-width: 660px;
+  }
+
+  .container {
+    width: 620px;
+    padding: 0 20px;
+    /*Временно для сеток*/
+    outline: 1px dotted black;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  body {
+    min-width: 1200px;
+  }
+
+  .container {
+    width: 960px;
+    padding: 0 120px;
+    /*Временно для сеток*/
+    outline: 1px dotted black;
+  }
 }

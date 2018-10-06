@@ -7,6 +7,7 @@ $title-color: #000000;
 $decor-color: #d22856;
 $form-color: #2aab6d;
 $form-color-hover: #1c9b5e;
+$form-border-color: #e5e5e5;
 
 
 /*Примеси*/
@@ -15,3 +16,7 @@ $form-color-hover: #1c9b5e;
   padding: 0;
   list-style: none;
 }
+
+/*Размеры брайкпоинтов*/
+$tablet-width: 660px;
+$desktop-width: 1200px;

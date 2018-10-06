@@ -1,20 +1,24 @@
 .page-header {
   color: $header-text-color;
   background: url("../img/bg-back-mobile@1x.jpg") center top no-repeat;
-  /*Непонятно, что с этим делать???*/
-  width: 320px;
+  /*Временно для сетки*/
   outline: 3px solid yellow;
+  min-height: 990px;
+}
+
+.page-header__menu {
+  background-color: $base-color;
+  /**Временно для сеток*/
+  outline: 2px dotted lightgreen;
 }
 
 .page-header__menu-wrapper {
-  background-color: $header-color;
   width: 320px;
 }
 
 
 .main-nav__list {
   @include list-default;
-  background-color: $base-color;
   width: 320px;
 }
 
@@ -37,15 +41,22 @@
   }
 }
 
+.intro__title-inner,
 .intro__title {
   font-size: 24px;
   line-height: 28px;
   font-weight: 300;
 }
 
+.intro__title {
+  display: none;
+}
+
 .intro__wrapper {
   background-color: $base-color;
   width: 320px;
+  /*Временно для сеток*/
+  outline: 2px solid white;
 }
 
 .intro__button {
@@ -69,4 +80,57 @@
 
 .intro__text {
   font-weight: 300;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    background: url("../img/bg-back-tablet@1x.jpg") center top no-repeat;
+    min-height: 730px;
+  }
+
+  .intro__wrapper {
+    min-height: 480px;
+    background-color: transparent;
+  }
+
+  .intro__title {
+    display: block;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    background: url("../img/bg-back-desktop@1x.jpg") center top no-repeat;
+    min-height: 850px;
+    padding: 0 110px;
+  }
+
+  .page-header__menu {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    background-color: $header-color;
+    align-items: center;
+
+    /*Временно*/
+    min-height: 110px;
+  }
+
+  .main-nav__list {
+    display: flex;
+    width: 660px;
+
+    justify-content: space-between;
+  }
+
+  .intro__wrapper {
+    min-height: 560px;
+    background-color: transparent;
+    /*Временно*/
+    width: 370px;
+  }
+
+  .intro__title {
+    display: block;
+  }
 }
