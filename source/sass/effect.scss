@@ -1,0 +1,49 @@
+.effect {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .effect {
+    display: block;
+    /*Временно*/
+    outline: 2px solid tomato;
+    min-height: 430px;
+  }
+
+  .effect__picture-number {
+    font-size: 96px;
+    line-height: 150px;
+    color: $decor-color;
+    font-weight: 700;
+  }
+
+  .effect__info {
+    margin-left: 300px;
+    /*Временно*/
+    outline: 2px solid black;
+  }
+
+  .effect__info-title {
+    font-size: 30px;
+    line-height: 36px;
+    color: $title-color;
+  }
+
+  .effect__info-link {
+    color: $decor-color;
+    text-decoration: underline;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .effect {
+    display: block;
+    /*Временно*/
+    outline: 2px solid tomato;
+    min-height: 470px;
+  }
+
+  .effect__info {
+    margin-left: 370px;
+  }
+}

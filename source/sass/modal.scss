@@ -1,6 +1,9 @@
 .modal {
+  text-align: center;
   width: 320px;
+  /*360px*/
   outline: 2px solid yellow;
+  min-height: 360px;
 }
 
 .modal__title {
@@ -9,4 +12,24 @@
 
 .modal__wrapper {
   background-color: $section-background;
+}
+
+@media (min-width: $tablet-width) {
+  .modal {
+    width: 460px;
+    /*Временно*/
+    min-height: 430px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .modal {
+    width: 780px;
+    /*Временно*/
+    min-height: 370px;
+  }
+
+  .modal__wrapper-fail {
+    background-color: $section-background;
+  }
 }
