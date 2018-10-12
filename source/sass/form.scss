@@ -136,26 +136,26 @@
   }
 }
 
-.form__records-label input[type="checkbox"]:focus + .checkbox-indicator {
+.form__records-label .form__input:focus + .checkbox-indicator {
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.form__records-label input[type="checkbox"]:checked + .checkbox-indicator:before,
-.form__records-label input[type="checkbox"]:checked + .checkbox-indicator:after {
+.form__records-label .form__input:checked + .checkbox-indicator::before,
+.form__records-label .form__input:checked + .checkbox-indicator::after {
   content: "";
   position: absolute;
   height: 3px;
   background: $decor-color;
 }
 
-.form__records-label input[type="checkbox"]:checked + .checkbox-indicator:after {
+.form__records-label .form__input:checked + .checkbox-indicator::after {
   top: 19px;
   left: 5px;
   width: 10px;
   transform: rotate(45deg);
 }
 
-.form__records-label input[type="checkbox"]:checked + .checkbox-indicator:before {
+.form__records-label .form__input:checked + .checkbox-indicator::before {
   top: 14px;
   left: 9px;
   width: 22px;
@@ -163,7 +163,7 @@
   transform: rotate(-45deg);
 }
 
-.form__app-type-label input[type="radio"] + .checkbox-indicator {
+.form__app-type-label .form__input + .checkbox-indicator {
   position: absolute;
   top: -5px;
   left: 20px;
@@ -183,11 +183,11 @@
   }
 }
 
-.form__app-type-label input[type="radio"]:focus+.checkbox-indicator {
+.form__app-type-label .form__input:focus + .checkbox-indicator {
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.form__app-type-label input[type="radio"]:checked+.checkbox-indicator:before {
+.form__app-type-label .form__input:checked + .checkbox-indicator::before {
   content: "";
   position: absolute;
   top: 11px;

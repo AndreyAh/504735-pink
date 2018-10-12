@@ -50,6 +50,7 @@
 
 .page-header__menu--open .page-header__menu-wrapper {
   background-color: $base-color;
+  border-bottom: 1px solid $title-color;
 }
 
 .page-header__menu--open .page-header__menu-toggle-burger {
