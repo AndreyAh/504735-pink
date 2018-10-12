@@ -1,25 +1,106 @@
 .page-header {
   color: $header-text-color;
-  background: url("../img/bg-back-mobile@1x.jpg") center top no-repeat;
-  /*Временно для сетки*/
-  outline: 3px solid yellow;
-  min-height: 990px;
+  background-color: #000000;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 320px;
 }
 
 .page-header__menu {
-  background-color: $base-color;
-  /**Временно для сеток*/
-  outline: 2px dotted lightgreen;
+  background-color: $header-color;
 }
 
 .page-header__menu-wrapper {
-  width: 320px;
+  position: relative;
+  display: block;
+  padding: 20px;
 }
 
+.page-header__logo-img:hover path,
+.page-header__logo-img:focus path {
+  fill: $decor-color;
+}
+
+.page-header__logo-img:active path {
+  fill: rgba($decor-color, 0.3%);
+}
+
+/*Начало логики меню*/
+.page-header__menu--open .page-header__menu-toggle-cross {
+  position: absolute;
+  top: 18px;
+  right: 7px;
+  background-color: transparent;
+  border: none;
+  width: 50px;
+  height: 25px;
+  cursor: pointer;
+
+  &:hover path,
+  &:focus path {
+    fill: $decor-color;
+  }
+
+  &:active path {
+    fill: rgba($decor-color, 0.3%);
+  }
+}
+
+.page-header__menu--open .page-header__menu-wrapper {
+  background-color: $base-color;
+}
+
+.page-header__menu--open .page-header__menu-toggle-burger {
+  display: none;
+}
+
+.page-header__menu--close .main-nav {
+  display: none;
+}
+
+.page-header__menu--close .page-header__menu-toggle-burger {
+  position: absolute;
+  top: 19px;
+  right: 26px;
+  background-color: transparent;
+  border: none;
+  width: 50px;
+  height: 25px;
+  cursor: pointer;
+
+  &:hover path,
+  &:focus path {
+    fill: $decor-color;
+  }
+
+  &:active path {
+    fill: rgba($decor-color, 0.3%);
+  }
+}
+
+.page-header__menu--close .page-header__menu-toggle-cross {
+  display: none;
+}
+/*конец логики меню*/
+
+.page-header__menu--nojs .page-header__menu-toggle-cross,
+.page-header__menu--nojs .page-header__menu-toggle-burger {
+  display: none;
+}
+
+.page-header__menu--nojs .main-nav {
+  display: block;
+}
 
 .main-nav__list {
   @include list-default;
   width: 320px;
+}
+
+.main-nav__item {
+  background-color: $base-color;
 }
 
 .main-nav__item a {
@@ -27,6 +108,12 @@
   font-size: 18px;
   line-height: 32px;
   text-transform: uppercase;
+  padding: 15px;
+  display: block;
+  border-top: 1px solid #485461;
+  border-bottom: 1px solid $title-color;
+  text-align: center;
+  font-weight: 700;
 }
 
 .main-nav__item a[href] {
@@ -48,21 +135,41 @@
   font-weight: 300;
 }
 
+.intro__title-inner {
+  width: 240px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 55px; /*,???*/
+}
+
 .intro__title {
   display: none;
 }
 
+.intro__picture {
+  display: block;
+  padding-top: 109px;
+}
+
 .intro__wrapper {
   background-color: $base-color;
-  width: 320px;
-  /*Временно для сеток*/
-  outline: 2px solid white;
+  text-align: center;
+  padding-bottom: 30px;
+  padding-top: 59px;
+  margin-top: -21px;
 }
 
 .intro__button {
   font-weight: 700;
-  line-height: 21px;
+  font-size: 18px;
+  line-height: 18px;
   color: $header-text-color;
+  background-color: transparent;
+  border: 2px solid $header-text-color;
+  border-radius: 28px;
+  cursor: pointer;
+  padding: 13px 36px;
 
   &:hover {
     background: $header-text-color;
@@ -70,38 +177,88 @@
   }
 
   &:active {
-    color: rgba($decor-color, 0.7%);
+    color: rgba($decor-color, 0.3%);
   }
 }
 
 .intro__os-list {
   @include list-default;
+  display: flex;
+  justify-content: space-between;
+  width: 205px;
+  align-items: baseline;
+  margin: 0 auto;
+  margin-top: 45px;
 }
 
 .intro__text {
   font-weight: 300;
+  width: 230px;
+  margin: 0 auto;
+  margin-top: 15px;
 }
 
 @media (min-width: $tablet-width) {
   .page-header {
-    background: url("../img/bg-back-tablet@1x.jpg") center top no-repeat;
-    min-height: 730px;
+    background-image: url("../img/bg-back-tablet@1x.jpg");
   }
 
-  .intro__wrapper {
-    min-height: 480px;
-    background-color: transparent;
+  .intro {
+    position: relative;
+    min-height: 620px;
   }
 
   .intro__title {
     display: block;
+    font-size: 40px;
+    line-height: 48px;
+    width: 200px;
+    position: absolute;
+    text-align: center;
+    top: 66px;
+    left: 70px;
+  }
+
+  .intro__wrapper {
+    background-color: transparent;
+    position: absolute;
+    width: 300px;
+    top: 246px;
+    left: 20px;
+  }
+
+  .intro__picture {
+    display: block;
+    position: absolute;
+    top: -35px;
+    left: -20px;
+    width: 700px;
+    height: 545px;
+  }
+
+  .intro__button {
+    padding: 13px 46px;
+  }
+
+  .intro__os-list {
+    margin-top: 57px;
+  }
+
+  .intro__text {
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 31px;
+    width: auto;
+  }
+
+  .main-nav__list {
+    width: auto;
   }
 }
 
 @media (min-width: $desktop-width) {
   .page-header {
-    background: url("../img/bg-back-desktop@1x.jpg") center top no-repeat;
-    min-height: 850px;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
     padding: 0 110px;
   }
 

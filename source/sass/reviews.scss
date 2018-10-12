@@ -1,14 +1,26 @@
 .reviews {
-  /*Временно для наглядности*/
-  outline: 2px solid yellow;
-  width: 320px;
+  background-color: $header-text-color;
 }
 
 .reviews__list {
   @include list-default;
+  position: relative;
+  min-height: 260px;
+  background-color: $header-text-color;
+  margin-top: -42px;
+  padding-top: 42px;
 }
 
-.reviews__item--name {
+.reviews__item {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+}
+
+.reviews__item-name {
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
@@ -16,6 +28,40 @@
   font-style: normal;
 }
 
-.reviews__item--text {
+.reviews__item-text {
   line-height: 30px;
+}
+
+.reviews__item-about {
+  display: none;
+}
+
+.reviews__toggles {
+  width: 70px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: $tablet-width) {
+  .reviews__item-name {
+    order: 1;
+  }
+
+  .reviews__item-about {
+    display: block;
+    order: 2;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .reviews {
+    /*Временно для наглядности*/
+    min-height: 390px;
+  }
+
+  .reviews__toggles {
+    display: none;
+  }
 }

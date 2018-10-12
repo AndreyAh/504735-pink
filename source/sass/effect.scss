@@ -5,28 +5,37 @@
 @media (min-width: $tablet-width) {
   .effect {
     display: block;
-    /*Временно*/
-    outline: 2px solid tomato;
-    min-height: 430px;
+    position: relative;
   }
 
   .effect__picture-number {
     font-size: 96px;
     line-height: 150px;
     color: $decor-color;
-    font-weight: 700;
+    font-weight: 600;
+    position: absolute;
+    top: 40px;
+    left: 84px;
   }
 
   .effect__info {
-    margin-left: 300px;
-    /*Временно*/
-    outline: 2px solid black;
+    margin-top: 96px;
+    margin-left: 309px;
+    margin-bottom: 111px;
   }
 
   .effect__info-title {
+    margin: 0;
+    margin-bottom: 10px;
     font-size: 30px;
     line-height: 36px;
     color: $title-color;
+  }
+
+  .effect__info-text {
+    margin: 0;
+    width: 300px;
+    margin-bottom: 11px;
   }
 
   .effect__info-link {

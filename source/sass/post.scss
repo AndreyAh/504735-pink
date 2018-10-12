@@ -1,14 +1,72 @@
 .post {
-  width: 320px;
-  outline: 3px dotted green;
+  min-width: 320px;
+  margin: 0 auto;
   background-color: $section-background;
 }
 
 .post__title {
+  margin: 0;
+  padding-bottom: 43px;
   font-weight: 400;
   font-size: 14px;
   line-height: 30px;
   background-color: $header-text-color;
+  text-align: center;
+}
+
+.post__img {
+  margin: 0 auto;
+  display: block;
+  padding-top: 20px;
+}
+
+.post-fieldset {
+  padding: 0;
+  padding-top: 5px;
+  border: none;
+  position: relative;
+  min-height: 120px;
+  border-bottom: 1px solid #dddfe0;
+}
+
+.filters__toggles {
+  width: 220px;
+  margin: 0 auto;
+
+  display: flex;
+}
+
+.slider__toggle {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin-right: 24px;
+
+  &:hover svg,
+  &:focus svg {
+    fill: rgba(#000000, 0.5);
+  }
+
+  &--active svg {
+    fill: $decor-color;
+  }
+}
+
+.post__filters {
+  position: absolute;
+  top: 79px;
+  left: 35px;
+  width: 240px;
+}
+
+.form-wrapper {
+  margin-top: 36px;
+}
+
+.post-buttons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 37px;
 }
 
 .post__button {
@@ -17,11 +75,17 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 18px;
+  text-align: center;
+  border-radius: 27px;
+  padding: 15px 45px 16px 40px;
+  width: 280px;
+  margin: 0 auto;
 }
 
 .post__post {
   border: 3px solid $decor-color;
   color: $decor-color;
+  margin-bottom: 10px;
 
   &:hover,
   &:focus {
@@ -37,6 +101,7 @@
 .post__cancel {
   border: 3px solid rgba($base-color, 0.1%);
   color: rgba($base-color, 0.1%);
+  margin-bottom: 44px;
 
   &:hover,
   &:focus {
