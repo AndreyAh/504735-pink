@@ -64,16 +64,44 @@
 @media (min-width: $tablet-width) {
   .page-footer__wrapper {
     flex-direction: row;
-    justify-content: space-between;
+    margin-bottom: 35px;
   }
 
   .social__list {
-    display: flex;
+    margin-left: 75px;
+  }
+
+  .page-footer__copyright {
+    margin-top: 0;
+    margin-left: auto;
+  }
+
+  .page-footer__logo-img {
+    margin-bottom: 0;
   }
 }
 
 @media (min-width: $desktop-width) {
   .page-footer {
     display: block;
+  }
+
+  .page-footer__wrapper {
+    margin-top: 70px;
+    margin-bottom: 35px;
+  }
+
+  .social__list {
+    margin-left: 245px;
+  }
+
+  .page-footer__copyright {
+    margin-top: 0;
+    margin-left: auto;
+  }
+
+  .copyright__text {
+    font-size: 18px;
+    line-height: 18px;
   }
 }

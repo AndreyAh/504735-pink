@@ -36,8 +36,7 @@
   margin: 0 20px;
   padding: 15px 48px;
   cursor: pointer;
-  margin-top: 52px;
-  margin-bottom: 48px;
+  margin-bottom: 50px;
 
   &:hover,
   &:focus {
@@ -52,19 +51,53 @@
 @media (min-width: $tablet-width) {
   .modal {
     width: 460px;
-    /*Временно*/
-    min-height: 430px;
+  }
+
+  .modal__title {
+    font-size: 30px;
+    line-height: 40px;
+    padding-top: 45px;
+    padding-bottom: 25px;
+    width: 220px;
+    margin: 0 auto;
+  }
+
+  .modal__text {
+    width: 320px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 35px;
+  }
+
+  .modal__text br {
+    display: none;
+  }
+
+  .modal__wrapper .modal__button {
+    margin-top: 50px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .modal {
     width: 780px;
-    /*Временно*/
-    min-height: 370px;
+  }
+
+  .modal__title {
+    width: 400px;
+  }
+
+  .modal__text {
+    width: 400px;
+  }
+
+  .modal__button {
+    width: 460px;
   }
 
   .modal__wrapper-fail {
     background-color: $section-background;
+    padding-top: 50px;
   }
 }

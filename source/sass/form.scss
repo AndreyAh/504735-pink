@@ -70,6 +70,10 @@
   left: 51px;
 }
 
+.form__contacts .form__legend {
+  display: none;
+}
+
 .form__legend--mobile {
   display: none;
 }
@@ -262,33 +266,123 @@
     }
   }
 
+  .form__title {
+    font-size: 18px;
+    width: 500px;
+    margin-top: 90px;
+    margin-bottom: 55px;
+  }
+
+  .form__personal-data p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
+  }
+
+  .form__label {
+    padding-left: 0;
+  }
+
+  .form__input {
+    flex-grow: 2;
+  }
+
+  .form__input-wrapper {
+    margin-top: 45px;
+    margin-left: 35px;
+    margin-bottom: 55px;
+  }
+
   .form__title-add {
     display: block;
   }
 
-  .form__legend--mobile {
-    display: block;
-    position: absolute;
+  .form__legend {
+    position: static;
+    text-align: center;
+    width: auto;
+    padding-left: 20px;
+    padding-right: 20px;
   }
+
+  .form__contacts .form__legend {
+    display: block;
+  }
+
   /*???*/
   .form .form__personal-data {
     order: 1;
     border: none;
+    margin-bottom: 10px;
   }
 
   .form__app-type {
     order: 2;
     background-color: transparent;
+    margin-bottom: 60px;
+  }
+
+  .form__app-type-label {
+    padding-left: 80px;
+  }
+
+  .form__contacts-wrapper {
+    padding-top: 20px;
   }
 
   .form__contacts {
+    margin-bottom: 55px;
     order: 3;
     position: relative;
+  }
+
+  .form__contacts p {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 25px;
+
+    &::before { /*???????????????????????????*/
+      content: "";
+      position: absolute;
+      top: 188px;
+      right: 60px;
+      width: 60px;
+      height: 60px;
+      background-color: $form-border-color;
+      background-image: url("../img/icon-mail.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 55px;
+      right: 60px;
+      width: 60px;
+      height: 60px;
+      background-color: $form-border-color;
+      background-image: url("../img/icon-phone.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  .form__input-contacts {
+    width: 500px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding-right: 65px;
+  }
+
+  .form__label-contacts {
+    padding-left: 80px;
   }
 
   .form__records {
     order: 4;
     background-color: transparent;
+    margin-bottom: 15px;
   }
 
   .form__emotion {
@@ -297,7 +391,11 @@
 
   .form__input-text {
     width: 500px;
-    margin: 0 40px; /*Почему не работает auto*/
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    padding-top: 15px;
   }
 
   .form__send {
@@ -305,8 +403,17 @@
     align-items: center;
     justify-content: space-between;
     order: 6;
-    /*Временно */
-    min-height: 180px;
+    margin-top: 45px;
+    margin-bottom: 30px;
+  }
+
+  .form__descript {
+    margin: 0;
+  }
+
+  .form__button {
+    width: 300px;
+    margin: 0;
   }
 }
 
@@ -316,42 +423,103 @@
     padding: 0 120px;
   }
 
+  .form__title {
+    width: 760px;
+    margin-top: 100px;
+    margin-bottom: 75px;
+  }
+
+  .form__title-add {
+    display: inline;
+  }
+
   .form__wrapper {
     flex-direction: row;
     flex-wrap: wrap;
   }
 
-  .form__app-type,
   .form__personal-data {
-    width: 440px;
+    width: 435px;
+    margin-left: 10px;
+  }
+
+  .form__app-type {
+    margin-left: 70px;
+    width: 435px;
+  }
+
+  .form__app-type .form__input-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: 75px;
+    margin-top: 55px;
+    margin-bottom: 0;
   }
 
   .form__contacts {
     width: 940px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+  }
+
+  .form__contacts p {
+    margin-bottom: 5px;
+  }
+
+  .form__contacts .form__legend {
+    display: block;
   }
 
   .form__contacts-wrapper {
     display: flex;
   }
 
+  .form__input-contacts {
+    width: 375px;
+    margin-left: 60px;
+  }
+
+  .form__contacts p::after {
+    top: 56px;
+    right: 72px;
+  }
+
+  .form__contacts p::before {
+    top: 56px;
+    left: 373px;
+  }
+
   .form__input-wrapper {
     display: flex;
   }
 
-  .form__input-wrapper-couple {
-    width: 290px;
-  }
-
   .form__records {
     width: 940px;
+    margin: 0 auto;
+    margin-bottom: 55px;
+  }
+
+  .form__records .form__input-wrapper {
+    margin: 0 auto;
+    margin-top: 55px;
+    width: 830px;
   }
 
   .form__emotion {
     width: 940px;
+    margin: 0 auto;
   }
 
   .form__input-text {
     width: 820px;
-    margin: 0 40px; /*Почему не работает auto???*/
+    margin: 0 auto;
+    margin-bottom: 45px;
+    height: 130px;
+  }
+
+  .form__send {
+    width: 940px;
+    margin: 0 auto;
+    margin-top: 60px;
   }
 }

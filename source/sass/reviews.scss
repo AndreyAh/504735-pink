@@ -39,26 +39,57 @@
 .reviews__toggles {
   width: 70px;
   margin: 0 auto;
-  margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
 }
 
 @media (min-width: $tablet-width) {
+  .reviews__item-text {
+    font-size: 18px;
+  }
+
   .reviews__item-name {
     order: 1;
+    font-size: 20px;
+    margin-top: 17px;
+    margin-bottom: 5px;
   }
 
   .reviews__item-about {
     display: block;
     order: 2;
+    margin: 0;
   }
 }
 
 @media (min-width: $desktop-width) {
   .reviews {
-    /*Временно для наглядности*/
-    min-height: 390px;
+    background-image: url("../img/icon-quotes.svg");
+    background-position: center 70px;
+    background-repeat: no-repeat;
+  }
+
+  .reviews__list {
+    margin: 0 auto;
+    width: 730px;
+    min-height: 240px;
+  }
+
+  .reviews__item {
+    margin-top: -10px;
+  }
+
+  .slider__reviews {
+    padding-top: 140px;
+  }
+
+  .reviews__item-name {
+    font-size: 24px;
+  }
+
+  .reviews__item-about {
+    font-size: 18px;
+    line-height: 30px;
   }
 
   .reviews__toggles {

@@ -6,6 +6,12 @@
   .effect {
     display: block;
     position: relative;
+    background-color: $header-text-color;
+    background-image: url("../img/icon-editor-diagram-fill.svg"),
+      url("../img/icon-timer.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: 40px 115px, -30px 60px;
+    background-size: 200px 200px, 340px 275px;
   }
 
   .effect__picture-number {
@@ -14,14 +20,14 @@
     color: $decor-color;
     font-weight: 600;
     position: absolute;
-    top: 40px;
+    top: 135px;
     left: 84px;
   }
 
   .effect__info {
-    margin-top: 96px;
-    margin-left: 309px;
-    margin-bottom: 111px;
+    padding-top: 96px;
+    padding-left: 309px;
+    padding-bottom: 106px;
   }
 
   .effect__info-title {
@@ -35,24 +41,70 @@
   .effect__info-text {
     margin: 0;
     width: 300px;
-    margin-bottom: 11px;
+    margin-bottom: 10px;
   }
 
   .effect__info-link {
     color: $decor-color;
     text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: $base-color;
+    }
+
+    &:active {
+      color: rgba($base-color, 0.3%);
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .effect {
     display: block;
-    /*Временно*/
-    outline: 2px solid tomato;
-    min-height: 470px;
+    background-color: $section-background;
+    background-position: 150px 105px, 105px 35px;
+    background-size: 255px 253px, 345px 345px;
   }
 
   .effect__info {
-    margin-left: 370px;
+    margin-left: 375px;
+    width: 580px;
+    padding-top: 130px;
+    padding-left: 0;
+    padding-bottom: 110px;
+  }
+
+  .effect__info-title br {
+    display: none;
+  }
+
+  .effect__info-title {
+    margin-bottom: 25px;
+    line-height: 30px;
+  }
+
+  .effect__info-text,
+  .effect__info-link {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .effect__info-text {
+    width: 530px;
+    margin-bottom: 30px;
+    white-space: pre-line;
+  }
+
+  .effect__info-text br {
+    display: none;
+  }
+
+  .effect__picture-number {
+    font-size: 120px;
+    line-height: 190px;
+    top: 130px;
+    left: 210px;
   }
 }

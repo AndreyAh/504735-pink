@@ -1,11 +1,13 @@
 .price {
   background-color: $section-background;
   background-image: url("../img/bg-triangle-white.svg");
-  background-position: center top;
+  background-position: center -15px;
   background-repeat: no-repeat;
-  /*Временно*/
-  outline: 3px solid #e80744;
-  min-height: 506px;
+}
+
+.price__list {
+  padding-top: 135px;
+  padding-bottom: 105px;
 }
 
 .price__tariff {
@@ -51,18 +53,50 @@
 }
 
 @media (min-width: $tablet-width) {
-  .price__options {
+  .price__list {
+    padding-top: 90px;
+    padding-bottom: 70px;
+  }
 
-    width: 153px;
-    padding: 7px 0 7px 15px;
+  .price__tariff {
+    font-size: 16px;
+    width: 155px;
+    box-sizing: border-box;
+    padding-top: 15px;
+    border-radius: 3px;
+  }
+
+  .price__value {
+    display: block;
+    padding-bottom: 15px;
+  }
+
+  .price__options {
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .price__toggles {
+    display: none;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .price {
+    background-position: center 0;
+  }
+
+  .price__list {
+    padding-top: 140px;
+    padding-bottom: 95px;
+    margin: 0 auto;
+  }
+
   .price__tariff {
     font-size: 18px;
     width: 232px;
-    padding: 17px 0;
+    padding: 20px 0;
     border-radius: 3px;
   }
 
@@ -70,12 +104,14 @@
     font-size: 18px;
     box-sizing: border-box;
     width: 233px;
-    padding: 15px 0 14px 21px;
+    padding: 20px 0 15px 20px;
   }
 
   .price__value {
     text-align: center;
     font-size: 24px;
     font-weight: 300;
+    padding-bottom: 0;
+    padding-top: 10px;
   }
 }

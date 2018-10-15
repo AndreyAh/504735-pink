@@ -150,7 +150,8 @@
 
 .intro__picture {
   display: block;
-  padding-top: 109px;
+  padding-top: 110px;
+  margin-left: -145px; /*????????*/
 }
 
 .intro__wrapper {
@@ -204,9 +205,37 @@
     background-image: url("../img/bg-back-tablet@1x.jpg");
   }
 
+  .page-header__menu--open .page-header__menu-toggle-cross {
+    top: 43px;
+  }
+
+  .page-header__menu--close .page-header__menu-toggle-burger {
+    top: 45px;
+    right: 20px;
+  }
+
+  .page-header__menu--nojs .page-header__menu-toggle-burger {
+    top: 44px;
+    right: 20px;
+  }
+
+  .page-header__menu-wrapper {
+    padding-top: 45px;
+    padding-bottom: 34px;
+  }
+
+  .page-header__menu--close .page-header__menu-wrapper {
+    padding-top: 30px;
+    padding-bottom: 35px;
+  }
+
   .intro {
     position: relative;
     min-height: 620px;
+  }
+
+  .intro-inner {
+    min-height: 330px;
   }
 
   .intro__title {
@@ -219,6 +248,14 @@
     top: 66px;
     left: 70px;
   }
+
+  .intro__title-inner {
+    font-size: 50px;
+    line-height: 60px;
+    width: 490px;
+    padding-top: 70px;
+  }
+
 
   .intro__wrapper {
     background-color: transparent;
@@ -235,6 +272,7 @@
     left: -20px;
     width: 700px;
     height: 545px;
+    margin-left: 0;
   }
 
   .intro__button {
@@ -260,7 +298,21 @@
 @media (min-width: $desktop-width) {
   .page-header {
     background-image: url("../img/bg-back-desktop@1x.jpg");
-    padding: 0 110px;
+  }
+
+  .main-nav__item {
+    background-color: transparent;
+  }
+
+  .main-nav__item a {
+    border: none;
+    text-transform: none;
+    font-weight: 300;
+  }
+
+  .page-header__menu-toggle-cross,
+  .page-header__menu-toggle-burger {
+    display: none;
   }
 
   .page-header__menu {
@@ -269,26 +321,71 @@
     justify-content: space-between;
     background-color: $header-color;
     align-items: center;
+    padding: 0 110px;
+    /*!!!!!!!!!!!!!!!!!!!!!!!!!!!! Временно для верстки*/
+    padding-bottom: 5px;
+  }
 
-    /*Временно*/
-    min-height: 110px;
+  .page-header__menu--open .page-header__menu-wrapper {
+    background-color: transparent;
+    padding: 25px 0 35px 20px;
+  }
+
+  .page-header__menu--close .main-nav {
+    display: block;
   }
 
   .main-nav__list {
     display: flex;
-    width: 660px;
-
     justify-content: space-between;
+    width: 655px;
   }
 
   .intro__wrapper {
-    min-height: 560px;
+    width: 340px;
     background-color: transparent;
-    /*Временно*/
-    width: 370px;
+    top: 320px;
+    left: 110px;
+  }
+
+  .intro__button {
+    padding: 11px 30px;
+    font-size: 21px;
+  }
+
+  .intro__os-list {
+    margin-top: 81px;
+  }
+
+  .intro__text {
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 45px;
+    width: auto;
+  }
+
+  .intro {
+    padding: 0 120px;
+    min-height: 745px;
+  }
+
+  .intro-inner {
+    min-height: 285px;
   }
 
   .intro__title {
     display: block;
+    font-size: 50px;
+    line-height: 60px;
+    width: 280px;
+    position: absolute;
+    top: 75px;
+    left: 140px;
+  }
+
+  .intro__title-inner {
+    font-size: 50px;
+    line-height: 60px;
+    width: 760px;
   }
 }

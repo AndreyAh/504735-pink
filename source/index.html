@@ -47,9 +47,9 @@
       <div class="intro">
         <h1 class="intro__title">Взгляните на жизнь иначе!</h1>
         <picture class="intro__picture">
-          <source srcset="img/iphone-hand-desktop@1x.png" media="(min-width: 1200px)">
-          <source srcset="img/iphone-hand-tablet@1x.png"  media="(min-width: 660px)">
-          <img  src="img/iphone-hand-mobile@1x.png" alt="Фото телефона в руке">
+          <source srcset="img/iphone-hand-desktop@1x.png" media="(max-width: 1200px)"/>
+          <source srcset="img/iphone-hand-tablet@1x.png"  media="(min-width: 660px)"/>
+          <img src="img/iphone-hand-mobile@1x.png" alt="Фото телефона в руке"/>
         </picture>
         <div class="intro__wrapper">
           <a href="https://www.apple.com/ru/itunes/" class="intro__button button"> Скачать приложение</a>
@@ -81,30 +81,35 @@
           <p class="info__offer"> Нам есть, что вам предложить!</p>
           <ul class="info__list">
             <li class="info__item">
+              <img class="info__img-desktop" src="img/iphone-screen-1-desktop@1x.png" alt="Фото iphone">
               <h3 class="info__item-title">Поднимает настроение</h3>
               <p class="info__item-text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
             </li>
             <li class="info__item">
+              <img class="info__img-desktop" src="img/iphone-screen-2-desktop@1x.png" alt="Фото iphone">
               <h3 class="info__item-title">Меняет мир вокруг</h3>
-              <p class="info__item-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+              <p class="info__item-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы <br> усилить эффект</p>
             </li>
             <li class="info__item">
-              <h3 class="info__item-title">Заводит  новых друзей</h3>
+              <img class="info__img-desktop" width="245" height="300" src="img/iphone-screen-3-desktop@1x.png" alt="Фото iphone">
+              <h3 class="info__item-title">Заводит <br> новых друзей</h3>
               <p class="info__item-text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
             </li>
           </ul>
-          <img class="info__img" src="img/iphone-screen-mobile@1x.png" alt="Фото iphone">
+          <picture>
+            <source srcset="img/iphone-screen-3-tablet@1x.png"  media="(min-width: 660px)"/>
+            <img class="info__img" src="img/iphone-screen-mobile@1x.png" alt="Фото iphone">
+          </picture>
         </div>
       </section>
       <section class="effect">
         <div class="container">
-          <img class="effect__img"  src="#" alt="Диаграмма времени" >
+          <!-- <img class="effect__img"  src="img/" alt="Диаграмма времени" > -->
           <span class="effect__picture-number">24</span>
           <div class="effect__info">
-            <h3 class="effect__info-title">Эффект
-            на 24 часа!</h3>
+            <h3 class="effect__info-title">Эффект <br>на 24 часа!</h3>
             <p class="effect__info-text">Британские ученые провели исследования и доказали,
-              что положительный эффект от использования приложения длится целые сутки!
+              что положительный эффект<br> от использования приложения длится целые сутки!
             </p>
             <a  class="effect__info-link" href="#">Узнать больше об исследовании</a>
           </div>
@@ -112,7 +117,7 @@
       </section>
       <section class="reviews">
         <div class="container">
-          <div class="slider">
+          <div class="slider slider__reviews">
             <h2 class="visualy-hidden">Отзывы о приложении</h2>
             <div class="reviews__list slider__list">
               <blockquote class="reviews__item slider__item">
@@ -141,9 +146,9 @@
               </blockquote>
             </div>
             <p class="reviews__toggles slider__toggles">
-              <button type="button" class="slider__toggle slider__toggle--active"></button>
-              <button type="button" class="slider__toggle"></button>
-              <button type="button" class="slider__toggle"></button>
+              <button type="button" class="slider__toggle-rew slider__toggle--active"></button>
+              <button type="button" class="slider__toggle-rew"></button>
+              <button type="button" class="slider__toggle-rew"></button>
             </p>
           </div>
         </div>
@@ -151,7 +156,7 @@
       <section class="price">
         <div class="container">
           <div class="slider">
-            <h2 class="visually-hidden">Цены</h2>
+            <h2 class="visualy-hidden">Цены</h2>
             <table class="price__list">
               <thead >
                 <tr>
