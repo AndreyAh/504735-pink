@@ -48,6 +48,10 @@
   }
 }
 
+.modal__wrapper .modal__button {
+  margin-top: 50px;
+}
+
 @media (min-width: $tablet-width) {
   .modal {
     width: 460px;

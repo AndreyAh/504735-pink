@@ -1,7 +1,7 @@
 .post {
   min-width: 320px;
   margin: 0 auto;
-  // background-color: $section-background;
+  margin-top: 40px;
 }
 
 .post__title {
@@ -145,7 +145,7 @@
 
   .post__title {
     font-size: 18px;
-    padding-bottom: 70px;
+    padding-bottom: 65px;
   }
 
   .post__img {
@@ -229,6 +229,7 @@
 @media (min-width: $desktop-width) {
   .post {
     padding: 0 130px;
+    margin-top: 5px;
   }
 
   .post__forms {
@@ -275,7 +276,7 @@
     justify-content: space-between;
     width: 410px;
     margin-top: 140px;
-    margin-bottom: 55px;
+    margin-bottom: 60px;
   }
 
   .post__button {

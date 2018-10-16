@@ -129,6 +129,10 @@
   }
 }
 
+.intro {
+  overflow: hidden;
+}
+
 .intro__title-inner,
 .intro__title {
   font-size: 24px;
@@ -141,7 +145,7 @@
   margin: 0 auto;
   text-align: center;
   padding-top: 30px;
-  padding-bottom: 55px; /*,???*/
+  padding-bottom: 85px; /*,???*/
 }
 
 .intro__title {
@@ -151,7 +155,6 @@
 .intro__picture {
   display: block;
   padding-top: 110px;
-  margin-left: -145px; /*????????*/
 }
 
 .intro__wrapper {
@@ -159,7 +162,7 @@
   text-align: center;
   padding-bottom: 30px;
   padding-top: 59px;
-  margin-top: -21px;
+  margin-top: -15px;
 }
 
 .intro__button {
@@ -220,8 +223,8 @@
   }
 
   .page-header__menu-wrapper {
-    padding-top: 45px;
-    padding-bottom: 34px;
+    padding-top: 25px;
+    padding-bottom: 37px;
   }
 
   .page-header__menu--close .page-header__menu-wrapper {
@@ -256,23 +259,16 @@
     padding-top: 70px;
   }
 
-
   .intro__wrapper {
     background-color: transparent;
     position: absolute;
     width: 300px;
-    top: 246px;
+    top: 240px;
     left: 20px;
   }
 
   .intro__picture {
-    display: block;
     position: absolute;
-    top: -35px;
-    left: -20px;
-    width: 700px;
-    height: 545px;
-    margin-left: 0;
   }
 
   .intro__button {
@@ -308,6 +304,7 @@
     border: none;
     text-transform: none;
     font-weight: 300;
+    padding: 0;
   }
 
   .page-header__menu-toggle-cross,
@@ -321,14 +318,12 @@
     justify-content: space-between;
     background-color: $header-color;
     align-items: center;
-    padding: 0 110px;
-    /*!!!!!!!!!!!!!!!!!!!!!!!!!!!! Временно для верстки*/
-    padding-bottom: 5px;
+    padding: 0 130px;
   }
 
   .page-header__menu--open .page-header__menu-wrapper {
     background-color: transparent;
-    padding: 25px 0 35px 20px;
+    padding: 25px 0 35px 0;
   }
 
   .page-header__menu--close .main-nav {
@@ -338,14 +333,19 @@
   .main-nav__list {
     display: flex;
     justify-content: space-between;
-    width: 655px;
+    width: 620px;
   }
 
   .intro__wrapper {
     width: 340px;
     background-color: transparent;
-    top: 320px;
+    top: 315px;
     left: 110px;
+  }
+
+  .intro__picture {
+    padding-top: 100px;
+    left: 145px;
   }
 
   .intro__button {

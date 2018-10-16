@@ -3,12 +3,12 @@
 }
 
 .photo__title {
+  padding-top: 33px;
+  padding-bottom: 38px;
   font-weight: 400;
   font-size: 14px;
   line-height: 30px;
   text-align: center;
-  padding-top: 33px;
-  padding-bottom: 38px;
 }
 
 .photo__day {
@@ -19,42 +19,48 @@
   position: absolute;
   top: 0;
   right: 19px;
+  padding: 5px 20px;
+  font-weight: 700;
   font-size: 12px;
   line-height: 24px;
-  font-weight: 700;
   color: $header-text-color;
-  background: $decor-color;
   text-transform: uppercase;
-  padding: 6px 20px;
+  background: $decor-color;
 }
 
 .photo__wrapper {
-  background-color: $section-background;
+  margin-bottom: 20px;
   font-size: 14px;
   line-height: 24px;
-  padding-top: 17px;
-  padding-left: 18px;
-  padding-bottom: 19px;
+  background-color: $section-background;
+}
+
+.photo__item-author {
+  display: block;
+  padding-top: 18px;
+  padding-left: 15px;
 }
 
 .photo__item-text {
   margin: 0;
+  padding-left: 15px;
 }
 
 .photo__item-like {
+  position: relative;
+  margin: 0;
+  padding-top: 10px;
+  padding-left: 45px;
+  padding-bottom: 20px;
   font-size: 12px;
   color: $decor-color;
   text-transform: uppercase;
-  margin: 0;
-  padding-top: 10px;
-  padding-left: 32px;
-  position: relative;
 
   &::before {
     content: "";
     position: absolute;
     top: 15px;
-    left: 0;
+    left: 15px;
     width: 13px;
     height: 13px;
     background-image: url("../img/icon-heart.svg");
@@ -62,13 +68,15 @@
 }
 
 .photo__list {
-  @include list-default;
   margin-top: 20px;
   margin-bottom: 45px;
+
+  @include list-default;
 }
 
 .photo__item {
   margin-bottom: 20px;
+  background-color: $section-background;
 }
 
 .photo__item-img,
@@ -76,79 +84,89 @@
   vertical-align: bottom;
 }
 
+.photo__item-img-panorama {
+  width: 320px;
+  height: 135px;
+}
+
 .photo__item-time-ago {
-  text-transform: uppercase;
-  font-size: 12px;
   font-weight: 300;
+  font-size: 12px;
+  text-transform: uppercase;
 }
 
 @media (min-width: $tablet-width) {
   .photo__title {
     width: 450px;
     margin: 0 auto;
-    font-size: 18px;
     padding-top: 90px;
     padding-bottom: 75px;
+    font-size: 18px;
   }
 
   .photo__title br {
     display: none;
   }
 
-  .photo__day-lable {
-    top: 60px;
-  }
-
-  .photo__item-img-panorama {/*Почему автоматически на 20px меньше????*/
+  .photo__item-img-panorama {
     width: 660px;
     height: 510px;
   }
 
+  .photo__day-lable {
+    top: 60px;
+  }
+
   .photo__wrapper {
-    padding-top: 25px;
-    padding-left: 30px;
     position: relative;
+    padding: 0;
+  }
+
+  .photo__wrapper .photo__item-text {
+    padding-bottom: 20px;
   }
 
   .photo__list {
     display: flex;
     flex-wrap: wrap;
-    margin-left: -10px;
-    margin-right: -10px;
     margin-top: 50px;
+    margin-right: -10px;
+    margin-left: -10px;
   }
 
   .photo__item {
-    margin-left: 10px;
-    margin-right: 10px;
-    width: 300px;
     display: flex;
     flex-direction: column;
+    width: 300px;
+    min-height: 455px;
+    margin-right: 10px;
+    margin-left: 10px;
     background-color: $section-background;
+  }
+
+  .photo__item-author {
+    display: block;
+    padding-top: 25px;
+    padding-left: 30px;
   }
 
   .photo__item-text {
     padding-right: 20px;
-    min-height: 52px;/*????????*/
-
-    &--panorama {
-      min-heigth: 55px; /*?????????*/
-    }
-    // display: flex;
-    // Временно
-    // outline: 2px solid green;
+    padding-left: 30px;
   }
 
   .photo__item-like {
-    padding-left: 0;
+    margin-top: auto;
     padding-right: 60px;
+    padding-bottom: 25px;
+    padding-left: 30px;
 
     &::before {
       content: "";
       position: absolute;
       top: 15px;
-      left: auto;
       right: 30px;
+      left: auto;
       width: 13px;
       height: 13px;
       background-image: url("../img/icon-heart.svg");
@@ -163,8 +181,8 @@
         content: "";
         position: absolute;
         top: 15px;
-        left: auto;
         right: 30px;
+        left: auto;
         width: 13px;
         height: 13px;
         background-image: url("../img/icon-heart.svg");
@@ -187,18 +205,23 @@
     display: block;
   }
 
+  .photo__item-img-panorama {
+    width: 1200px;
+    height: 505px;
+  }
+
   .photo__day-lable {
     top: 50px;
     right: 130px;
   }
 
   .photo__list {
-    margin-left: 0;
     margin-right: 0;
-    margin-bottom: 5px;
+    margin-left: 0;
   }
 
   .photo__item {
+    min-height: 555px;
     margin-bottom: 55px;
   }
 
@@ -207,7 +230,8 @@
   }
 
   .photo__wrapper {
-    padding-top: 20px;
     padding-bottom: 0;
+    margin: 0 auto;
+    width: 940px;
   }
 }
