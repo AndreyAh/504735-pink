@@ -1,31 +1,42 @@
 .contacts {
-  background: url("../img/bg-triangle-white-footer.svg") no-repeat center 210px,
-    url("../img/bg-map-mobile@1x.png") no-repeat center center;
-  /*Временно для наглядности*/
-  width: 320px;
+  background-color: #ffffff;
+  background-image: url("../img/icon-map-marker.svg"),
+    url("../img/bg-triangle-white-footer.svg"),
+    url("../img/bg-map-mobile@1x.png");
+  background-position: center 507px, center 301px, center -33px;
+  background-repeat: no-repeat, no-repeat, no-repeat;
   min-height: 612px;
-  outline: 2px solid blue;
 }
 
 .contacts__title {
+  margin: 0;
   font-size: 24px;
   line-height: 28px;
   font-weight: 300;
   background-color: $header-text-color;
+  text-align: center;
+  padding-bottom: 36px;
+  padding-top: 42px;
 }
 
 .contacts__list {
   @include list-default;
   background-color: $header-text-color;
+  text-align: center;
 }
 
-.contacts__item--title {
+.contacts__item {
+  margin-bottom: 21px;
+}
+
+.contacts__item-title {
   font-size: 18px;
   line-height: 22px;
   font-weight: 700;
 }
 
-.contacts__item--data {
+.contacts__item-data {
+  margin: 0;
   font-weight: 300;
   font-size: 24px;
   line-height: 30px;
@@ -41,5 +52,82 @@
 
   &:active {
     color: rgba($base-color, 0.3%);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .contacts {
+    background-image: url("../img/icon-map-marker.svg"),
+      url("../img/bg-triangle-white-footer.svg"),
+      url("../img/bg-map-tablet@1x.jpg");
+    background-position: center 600px, center 330px, center 60px;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    min-height: 780px;
+  }
+
+  .contacts__title {
+    font-size: 40px;
+    line-height: 48px;
+    padding-bottom: 45px;
+    padding-top: 47px;
+  }
+
+  .contacts__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .contacts__item {
+    width: 260px;
+    flex-grow: 1;
+    margin-bottom: 50px;
+
+    &:last-child {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts {
+    background: url("../img/icon-map-marker.svg"),
+      url("../img/bg-triangle-white-footer.svg"),
+      url("../img/bg-map-desktop@1x.jpg");
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: center 615px, center 338px, center 75px;
+    min-height: 855px;
+  }
+
+  .contacts__list {
+    width: 960px;
+    margin: 0 auto;
+    padding: 0 120px;
+  }
+
+  .contacts__title {
+    font-size: 50px;
+    margin-top: 15px;
+    padding-bottom: 60px;
+    line-height: 60px;
+  }
+
+  .contacts__item {
+    width: 320px;
+
+    &:last-child {
+      padding-top: 0;
+      flex-grow: 0;
+      padding-bottom: 0;
+    }
+
+    &:nth-child(2) {
+      order: 2;
+    }
+
+    .contacts__item-data,
+    .contacts__item-data a {
+      display: block;
+      padding-top: 20px;
+    }
   }
 }

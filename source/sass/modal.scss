@@ -1,35 +1,107 @@
 .modal {
   text-align: center;
   width: 320px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   /*360px*/
-  outline: 2px solid yellow;
-  min-height: 360px;
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 .modal__title {
+  margin: 0;
   font-size: 18px;
+  padding-top: 45px;
+  padding-bottom: 25px;
 }
 
 .modal__wrapper {
   background-color: $section-background;
 }
 
+.modal__text {
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.modal__button {
+  background-color: $form-color;
+  color: $header-text-color;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+  border: none;
+  width: 280px;
+  margin: 0 20px;
+  padding: 15px 48px;
+  cursor: pointer;
+  margin-bottom: 50px;
+
+  &:hover,
+  &:focus {
+    background-color: $form-color-hover;
+  }
+
+  &:active {
+    color: rgba($header-text-color, 0.3%);
+  }
+}
+
+.modal__wrapper .modal__button {
+  margin-top: 50px;
+}
+
 @media (min-width: $tablet-width) {
   .modal {
     width: 460px;
-    /*Временно*/
-    min-height: 430px;
+  }
+
+  .modal__title {
+    font-size: 30px;
+    line-height: 40px;
+    padding-top: 45px;
+    padding-bottom: 25px;
+    width: 220px;
+    margin: 0 auto;
+  }
+
+  .modal__text {
+    width: 320px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 35px;
+  }
+
+  .modal__text br {
+    display: none;
+  }
+
+  .modal__wrapper .modal__button {
+    margin-top: 50px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .modal {
     width: 780px;
-    /*Временно*/
-    min-height: 370px;
+  }
+
+  .modal__title {
+    width: 400px;
+  }
+
+  .modal__text {
+    width: 400px;
+  }
+
+  .modal__button {
+    width: 460px;
   }
 
   .modal__wrapper-fail {
     background-color: $section-background;
+    padding-top: 50px;
   }
 }

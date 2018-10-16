@@ -1,6 +1,5 @@
 .page-footer {
-  outline: 2px solid gold;
-  width: 320px;
+  display: none;
 }
 
 .social__list {
@@ -10,4 +9,25 @@
 .footer__copyright {
   line-height: 18px;
   font-size: 14px;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer {
+    display: block;
+  }
+
+  .page-footer__wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .social__list {
+    display: flex;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer {
+    display: block;
+  }
 }
