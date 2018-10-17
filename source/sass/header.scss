@@ -4,12 +4,22 @@
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover;
+  // background-size: cover;
   min-width: 320px;
+}
+
+@media (min-resolution: $retina-dpi),
+  (min-resolution: $retina-dppx) {
+  .page-header {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+    background-size: 640px 465px;
+  }
 }
 
 .page-header__menu {
   background-color: $header-color;
+  display: flex;
+  flex-direction: column;
 }
 
 .page-header__menu-wrapper {
@@ -51,6 +61,7 @@
 .page-header__menu--open .page-header__menu-wrapper {
   background-color: $base-color;
   border-bottom: 1px solid $title-color;
+  order: 1;
 }
 
 .page-header__menu--open .page-header__menu-toggle-burger {
@@ -95,6 +106,10 @@
   display: block;
 }
 
+.main-nav {
+  order: 2;
+}
+
 .main-nav__list {
   @include list-default;
   width: 320px;
@@ -133,6 +148,10 @@
   overflow: hidden;
 }
 
+.intro-inner {
+  max-height: 170px;
+}
+
 .intro__title-inner,
 .intro__title {
   font-size: 24px;
@@ -161,8 +180,7 @@
   background-color: $base-color;
   text-align: center;
   padding-bottom: 30px;
-  padding-top: 59px;
-  margin-top: -15px;
+  padding-top: 45px;
 }
 
 .intro__button {
@@ -206,6 +224,15 @@
 @media (min-width: $tablet-width) {
   .page-header {
     background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-position: center bottom;
+  }
+
+  @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
+    .page-header {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+      background-size: 1200px auto;
+    }
   }
 
   .page-header__menu--open .page-header__menu-toggle-cross {
@@ -266,9 +293,15 @@
     top: 240px;
     left: 20px;
   }
+  /**??????????????????????????????????????????????????????*/
+  img {
+    max-width: none;
+  }
 
   .intro__picture {
     position: absolute;
+    padding-top: 75px;
+    left: -20px;
   }
 
   .intro__button {
@@ -296,8 +329,29 @@
     background-image: url("../img/bg-back-desktop@1x.jpg");
   }
 
+  @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
+    .page-header {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+      background-size: 2560px auto;
+    }
+  }
+
   .main-nav__item {
     background-color: transparent;
+    position: relative;
+
+    &--active {
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -10px;
+        left: 0;
+        height: 2px;
+        background: $header-text-color;
+      }
+    }
   }
 
   .main-nav__item a {
@@ -313,7 +367,7 @@
   }
 
   .page-header__menu {
-    display: flex;
+    flex-direction: row;
     flex-grow: 1;
     justify-content: space-between;
     background-color: $header-color;

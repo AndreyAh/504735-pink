@@ -9,10 +9,18 @@
   <body>
     <header class="page-header">
       <div class="page-header__menu page-header__menu--open">
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item main-nav__item--active"><a>Главная</a></li>
+            <li class="main-nav__item"><a href="photo.html">Фотографии</a></li>
+            <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
+            <li class="main-nav__item"><a href="https://htmlacademy.ru">HTML Academy</a></li>
+          </ul>
+        </nav>
         <div class="page-header__menu-wrapper">
           <picture class="page-header__logo-img">
-            <source srcset="img/logo-pink-white-desktop.svg" media="(min-width: 1200px)">
-            <source srcset="img/logo-pink-white-tablet.svg" media="(min-width: 660px)">
+            <source srcset="img/logo-pink-white-desktop.svg" media="(min-width: 1200px)"/>
+            <source srcset="img/logo-pink-white-tablet.svg" media="(min-width: 660px)"/>
             <img src="img/logo-pink-white-mobile.svg" alt="Логотип PINK">
           </picture>
           <button class="page-header__menu-toggle-cross" type="button">
@@ -35,21 +43,13 @@
           </svg>
           <span class="visualy-hidden">Открыть меню</span></button>
         </div>
-        <nav class="main-nav">
-          <ul class="main-nav__list">
-            <li class="main-nav__item main-nav__item--active"><a>Главная</a></li>
-            <li class="main-nav__item"><a href="photo.html">Фотографии</a></li>
-            <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
-            <li class="main-nav__item"><a href="https://htmlacademy.ru">HTML Academy</a></li>
-          </ul>
-        </nav>
       </div>
       <div class="intro">
         <h1 class="intro__title">Взгляните на жизнь иначе!</h1>
         <picture>
-          <source srcset="img/iphone-hand-desktop@1x.png" media="(min-width: 1200px)"/>
-          <source srcset="img/iphone-hand-tablet@1x.png"  media="(min-width: 660px)"/>
-          <img class="intro__picture" src="img/iphone-hand-mobile@1x.png" alt="Фото телефона в руке"/>
+          <source media="(min-width: 1200px)" srcset="img/iphone-hand-desktop@1x.png 1x, img/iphone-hand-desktop@2x.png 2x"/>
+          <source media="(min-width: 660px)" srcset="img/iphone-hand-tablet@1x.png 1x, img/iphone-hand-tablet@2x.png 2x"/>
+          <img class="intro__picture" src="img/iphone-hand-mobile@1x.png" srcset="img/iphone-hand-mobile@2x.png 2x" alt="Фото телефона в руке"/>
         </picture>
         <div class="intro__wrapper">
           <a href="https://www.apple.com/ru/itunes/" class="intro__button button"> Скачать приложение</a>
@@ -81,30 +81,29 @@
           <p class="info__offer"> Нам есть, что вам предложить!</p>
           <ul class="info__list">
             <li class="info__item">
-              <img class="info__img-desktop" src="img/iphone-screen-1-desktop@1x.png" alt="Фото iphone">
+              <img class="info__img-desktop" src="img/iphone-screen-1-desktop@1x.png" srcset="img/iphone-screen-1-desktop@2x.png 2x" alt="Фото iphone">
               <h3 class="info__item-title">Поднимает настроение</h3>
               <p class="info__item-text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
             </li>
             <li class="info__item">
-              <img class="info__img-desktop" src="img/iphone-screen-2-desktop@1x.png" alt="Фото iphone">
+              <img class="info__img-desktop" src="img/iphone-screen-2-desktop@1x.png" srcset="img/iphone-screen-2-desktop@2x.png 2x" alt="Фото iphone">
               <h3 class="info__item-title">Меняет мир вокруг</h3>
               <p class="info__item-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы <br> усилить эффект</p>
             </li>
             <li class="info__item">
-              <img class="info__img-desktop" width="245" height="300" src="img/iphone-screen-3-desktop@1x.png" alt="Фото iphone">
+              <img class="info__img-desktop" width="245" height="300" src="img/iphone-screen-3-desktop@1x.png" srcset="img/iphone-screen-3-desktop@2x.png 2x" alt="Фото iphone">
               <h3 class="info__item-title">Заводит <br> новых друзей</h3>
               <p class="info__item-text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
             </li>
           </ul>
           <picture>
-            <source srcset="img/iphone-screen-3-tablet@1x.png"  media="(min-width: 660px)"/>
+            <source srcset="img/iphone-screen-3-tablet@1x.png 1x, img/iphone-screen-3-tablet@2x.png 2x"  media="(min-width: 660px)"/>
             <img class="info__img" src="img/iphone-screen-mobile@1x.png" alt="Фото iphone">
           </picture>
         </div>
       </section>
       <section class="effect">
         <div class="container">
-          <!-- <img class="effect__img"  src="img/" alt="Диаграмма времени" > -->
           <span class="effect__picture-number">24</span>
           <div class="effect__info">
             <h3 class="effect__info-title">Эффект <br>на 24 часа!</h3>
@@ -162,7 +161,7 @@
                 <tr>
                   <td class="price__tariff"></td>
                   <td class="price__tariff">База <br><span class="price__value">1,99 USD</span></td>
-                  <td class="price__tariff">Стандарт <br><span class="price__value">3,99 USD</span></td>
+                  <td class="price__tariff"><span class="flag__hit"><span class="flag__hit-text">хит</span></span>Стандарт <br><span class="price__value">3,99 USD</span></td>
                   <td class="price__tariff">Анлим <br><span class="price__value">9,99 USD</span></td>
                 </tr>
               </thead>
