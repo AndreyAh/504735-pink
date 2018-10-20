@@ -7,14 +7,15 @@
 
 .page-footer__logo-img {
   margin-bottom: 31px;
+  fill: $base-color;
 
-  &:hover path,
-  &:focus path {
+  &:hover,
+  &:focus {
     fill: $decor-color;
   }
 
-  &:active path {
-    fill: rgba($decor-color, 0.3%);
+  &:active {
+    fill: rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -52,19 +53,27 @@
   /*???*/
 }
 
-.copyright__link:hover path,
-.copyright__link:focus path {
-  fill: $base-color;
-}
+.copyright__link {
+  fill: $decor-color;
 
-.copyright__link:active path {
-  fill: rgba($base-color, 0.3%);
+  &:hover,
+  &:focus {
+    fill: $base-color;
+  }
+
+  &:active {
+    fill: rgba($base-color, 0.3%);
+  }
 }
 
 @media (min-width: $tablet-width) {
   .page-footer__wrapper {
     flex-direction: row;
     margin-bottom: 35px;
+  }
+
+  .page-footer__link {
+    margin-bottom: 10px;
   }
 
   .social__list {
@@ -78,6 +87,11 @@
 
   .page-footer__logo-img {
     margin-bottom: 0;
+  }
+
+  .copyright__link {
+    width: 35px;
+    padding-left: 5px;
   }
 }
 
@@ -94,7 +108,7 @@
   }
 
   .social__list {
-    margin-left: 240px;
+    margin-left: 235px;
   }
 
   .page-footer__copyright {
@@ -106,4 +120,9 @@
     font-size: 18px;
     line-height: 18px;
   }
+
+  // .copyright__link {
+  //   width: 35px;
+  //   padding-left: 5px;
+  // }
 }

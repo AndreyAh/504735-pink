@@ -36,18 +36,22 @@
   display: flex;
 }
 
-.slider__toggle {
+.slider__toggle-post {
   border: none;
   background-color: transparent;
   cursor: pointer;
   margin-right: 24px;
+}
 
-  &:hover svg,
-  &:focus svg {
+.slider__toggle-post-icon {
+  fill: #b5b9be;
+
+  &:hover,
+  &:focus {
     fill: rgba(#000000, 0.5);
   }
 
-  &--active svg {
+  &--active {
     fill: $decor-color;
   }
 }
@@ -57,20 +61,27 @@
   top: 90px;
   left: 35px;
   width: 240px;
-  -webkit-appearance: none;
-  border-radius: 2px;
+  appearance: none;
   height: 0;
   outline: none;
   border: 1px solid $base-color;
   background-color: $base-color;
 }
 
+.post__label--contrast {
+  display: none;
+}
+
+.post__label--brightness {
+  display: none;
+}
+
 .post__filters::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 15px;
-  height: 15px;
+  appearance: none;
+  width: 13px;
+  height: 13px;
   background: $section-background;
-  border-radius: 15px;
+  border-radius: 13px;
   border: 2px solid $decor-color;
   cursor: pointer;
 
@@ -137,6 +148,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .post {
+    margin-top: 45px;
+  }
+
   .post__wrapper {
     padding: 0 20px;
     background-color: $section-background;
@@ -145,32 +160,33 @@
 
   .post__title {
     font-size: 18px;
-    padding-bottom: 65px;
+    padding-bottom: 70px;
   }
 
   .post__img {
     padding-top: 57px;
   }
 
-  .slider__toggle {
+  .slider__toggle-post {
     display: none;
   }
 
   .form-wrapper {
-    margin-top: 35px;
-    margin-left: 25px;
+    margin-top: 25px;
+    margin-left: 20px;
   }
 
   .post-fieldset {
     margin: 0;
     padding: 0;
+    margin-top: 20px;
     border-bottom: none;
   }
 
   .post__label {
     padding-left: 80px;
-    padding-bottom: 25px;
-    padding-top: 25px;
+    padding-bottom: 30px;
+    padding-top: 15px;
     display: block;
     border-bottom: 1px solid #dddfe0;
 
@@ -178,7 +194,7 @@
       content: "";
       background-image: url("../img/icon-editor-contrast.svg");
       background-repeat: no-repeat;
-      background-position: 30px 30px;
+      background-position: 30px 25px;
       background-size: 18px 18px;
     }
 
@@ -186,7 +202,7 @@
       content: "";
       background-image: url("../img/icon-editor-crop.svg");
       background-repeat: no-repeat;
-      background-position: 30px 30px;
+      background-position: 25px 20px;
       background-size: 26px 22px;
     }
 
@@ -194,15 +210,14 @@
       content: "";
       background-image: url("../img/icon-editor-fill.svg");
       background-repeat: no-repeat;
-      background-position: 30px 30px;
+      background-position: 30px 25px;
       background-size: 24px 24px;
     }
   }
 
   .post__filters {
     position: static;
-    -webkit-appearance: none;
-    border-radius: 2px;
+    appearance: none;
     width: 200px;
     height: 0;
     outline: none;
@@ -214,6 +229,7 @@
     display: flex;
     flex-direction: column;
     margin-top: 65px;
+    margin-left: 20px;
   }
 
   .post__button {
@@ -221,7 +237,7 @@
   }
 
   .post__cancel {
-    margin-bottom: 45px;
+    margin-bottom: 55px;
     margin-top: 15px;
   }
 }
@@ -229,7 +245,7 @@
 @media (min-width: $desktop-width) {
   .post {
     padding: 0 130px;
-    margin-top: 5px;
+    margin-top: 0;
   }
 
   .post__forms {
@@ -243,15 +259,30 @@
     display: flex;
   }
 
+  .slider__toggle-post {
+    display: none;
+  }
+
   .post__img {
     margin-left: 80px;
   }
 
+  .form-wrapper {
+    margin-top: 35px;
+    margin-left: 90px;
+  }
+
+  .post-fieldset {
+    margin-top: 0;
+  }
+
   .post__label {
     padding-left: 90px;
+    padding-top: 25px;
+    padding-bottom: 25px;
 
     &--contrast {
-      background-position: 0 25px;
+      background-position: 5px 20px;
       background-size: 32px 32px;
     }
 
@@ -261,7 +292,7 @@
     }
 
     &--brightness {
-      background-position: 0 15px;
+      background-position: 0 20px;
       background-size: 47px 45px;
     }
   }
@@ -277,6 +308,7 @@
     width: 410px;
     margin-top: 140px;
     margin-bottom: 60px;
+    margin-left: 0;
   }
 
   .post__button {
@@ -286,9 +318,5 @@
   .post__cancel,
   .post__post {
     margin: 0;
-  }
-
-  .form-wrapper {
-    margin-left: 90px;
   }
 }

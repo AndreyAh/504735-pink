@@ -38,6 +38,8 @@
     "node": "8.12"
   },
   "dependencies": {
+    "gulp-imagemin": "^4.1.0",
+    "gulp-webp": "^3.0.0",
     "npm": "^6.4.1"
   }
 }
