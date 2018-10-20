@@ -1,4 +1,4 @@
-"use strict";
+// "use strict";
 
 var gulp = require("gulp");
 var sass = require("gulp-sass");
@@ -29,7 +29,7 @@ gulp.task("server", function () {
     ui: false
   });
 
-gulp.task('webp',() => {
+gulp.task("webp", function () {
     return gulp.src("source/img/**/*.{png,jpg}")
     .pipe(webp())
     .pipe(webp({quality: 90}))
