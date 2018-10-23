@@ -149,7 +149,7 @@
   content: "";
   position: absolute;
   height: 3px;
-  background: $decor-color;
+  background-color: $decor-color;
 }
 
 .form__records-label .form__input:checked + .checkbox-indicator::after {
@@ -198,7 +198,7 @@
   left: 10px;
   width: 15px;
   height: 15px;
-  background: $decor-color;
+  background-color: $decor-color;
   border-radius: 50%;
 }
 
@@ -256,6 +256,10 @@
   color: $decor-color;
 }
 
+.form__descript-plus {
+  display: none;
+}
+
 @media (min-width: $tablet-width) {
   .form {
     width: 620px;
@@ -281,6 +285,7 @@
 
   .form__label {
     padding-left: 0;
+    margin-bottom: 15px;
   }
 
   .form__input {
@@ -307,6 +312,11 @@
 
   .form__contacts .form__legend {
     display: block;
+  }
+
+  .form__label-contacts {
+    margin-bottom: 5px;
+    padding-left: 80px;
   }
 
   /*???*/
@@ -375,14 +385,14 @@
     padding-right: 65px;
   }
 
-  .form__label-contacts {
-    padding-left: 80px;
-  }
-
   .form__records {
     order: 4;
     background-color: transparent;
     margin-bottom: 15px;
+  }
+
+  .form__records-label {
+    padding-left: 85px;
   }
 
   .form__emotion {
@@ -393,9 +403,9 @@
     width: 500px;
     display: block;
     margin: 0 auto;
-    margin-top: 10px;
-    margin-bottom: 40px;
-    padding-top: 15px;
+    margin-top: 0;
+    margin-bottom: 50px;
+    padding-top: 5px;
   }
 
   .form__send {
@@ -425,8 +435,8 @@
 
   .form__title {
     width: 760px;
-    margin-top: 100px;
-    margin-bottom: 75px;
+    margin-top: 95px;
+    margin-bottom: 70px;
   }
 
   .form__title-add {
@@ -445,7 +455,11 @@
 
   .form__app-type {
     margin-left: 70px;
-    width: 431px;
+    width: 430px;
+  }
+
+  .form__app-type-label {
+    padding-left: 55px;
   }
 
   .form__app-type .form__input-wrapper {
@@ -457,7 +471,7 @@
   }
 
   .form__contacts {
-    width: 936px;
+    width: 940px;
     margin: 0 auto;
     margin-bottom: 60px;
   }
@@ -472,6 +486,11 @@
 
   .form__contacts-wrapper {
     display: flex;
+    padding-top: 10px;
+  }
+
+  .form__app-type-label .form__input + .checkbox-indicator {
+    left: 0;
   }
 
   .form__input-contacts {
@@ -480,12 +499,12 @@
   }
 
   .form__contacts p::after {
-    top: 56px;
+    top: 45px;
     right: 68px;
   }
 
   .form__contacts p::before {
-    top: 56px;
+    top: 45px;
     left: 373px;
   }
 
@@ -494,19 +513,23 @@
   }
 
   .form__records {
-    width: 936px;
+    width: 940px;
     margin: 0 auto;
     margin-bottom: 55px;
   }
 
   .form__records .form__input-wrapper {
     margin: 0 auto;
-    margin-top: 55px;
-    width: 830px;
+    margin-top: 50px;
+    width: 875px;
+  }
+
+  .form__input-wrapper-couple {
+    margin-right: 30px;
   }
 
   .form__emotion {
-    width: 936px;
+    width: 940px;
     margin: 0 auto;
   }
 
@@ -521,5 +544,13 @@
     width: 940px;
     margin: 0 auto;
     margin-top: 60px;
+  }
+
+  .form__descript {
+    width: 315px;
+  }
+
+  .form__descript-plus {
+    display: inline-block;
   }
 }

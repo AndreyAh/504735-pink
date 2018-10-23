@@ -4,8 +4,8 @@
   font-style: normal;
   src: local("Open Sans Light"),
     local("OpenSansLight"),
-    url("../fonts/OpenSansLight.woff2") format("woff2"),
-    url("../fonts/OpenSansLight.woff") format("woff");
+    url("../fonts/opensanslight.woff2") format("woff2"),
+    url("../fonts/opensanslight.woff") format("woff");
 }
 
 @font-face {
@@ -14,8 +14,8 @@
   font-style: normal;
   src: local("Open Sans"),
     local("OpenSans"),
-    url("../fonts/OpenSans.woff2") format("woff2"),
-    url("../fonts/OpenSans.woff") format("woff");
+    url("../fonts/opensans.woff2") format("woff2"),
+    url("../fonts/opensans.woff") format("woff");
 }
 
 @font-face {
@@ -24,8 +24,8 @@
   font-style: normal;
   src: local("Open Sans Bold"),
     local("OpenSansBold"),
-    url("../fonts/OpenSansBold.woff2") format("woff2"),
-    url("../fonts/OpenSansBold.woff") format("woff");
+    url("../fonts/opensansbold.woff2") format("woff2"),
+    url("../fonts/opensansbold.woff") format("woff");
 }
 
 body {
