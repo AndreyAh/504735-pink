@@ -149,7 +149,7 @@
   content: "";
   position: absolute;
   height: 3px;
-  background: $decor-color;
+  background-color: $decor-color;
 }
 
 .form__records-label .form__input:checked + .checkbox-indicator::after {
@@ -198,7 +198,7 @@
   left: 10px;
   width: 15px;
   height: 15px;
-  background: $decor-color;
+  background-color: $decor-color;
   border-radius: 50%;
 }
 

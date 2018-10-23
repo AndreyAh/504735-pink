@@ -50,9 +50,14 @@
   }
 }
 
+.contacts__map-mobile {
+  border: none;
+}
+
 .contacts__map-desktop,
 .contacts__map-tablet {
   display: none;
+  border: none;
 }
 
 .contacts-triangle {
@@ -62,7 +67,6 @@
   border-right: 160px solid transparent;
   border-top: 50px solid $header-text-color;
   z-index: 10;
-
 }
 
 @media (min-width: $tablet-width) {

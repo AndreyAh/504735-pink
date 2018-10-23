@@ -1,31 +1,44 @@
 .page-header {
   color: $header-text-color;
-  background-color: #000000;
-  background-image: url("../img/bg-back-mobile@1x.jpg");
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: cover;
   min-width: 320px;
+  position: relative;
+}
+
+.page-header__main-nav-wrapper {
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-resolution: $retina-dpi),
   (min-resolution: $retina-dppx) {
-  .page-header {
+  .page-header__main-nav-wrapper {
     background-image: url("../img/bg-back-mobile@2x.jpg");
     background-size: 640px 465px;
   }
 }
 
-.page-header__menu {
-  background-color: $header-color;
+.page-header__main-nav {
   display: flex;
   flex-direction: column;
+}
+
+.page-header__main-nav-wrapper picture {
+  order: 3;
+}
+
+.page-header__menu {
   position: relative;
 }
 
 .page-header__menu-wrapper {
-  position: relative;
+  background-color: $header-color;
+  position: absolute;
   display: block;
+  width: 320px;
+  box-sizing: border-box;
   padding: 20px;
 }
 
@@ -73,6 +86,7 @@
   background-color: $base-color;
   border-bottom: 1px solid $title-color;
   order: 1;
+  position: static;
 }
 
 .page-header__menu--open .page-header__menu-toggle-burger {
@@ -114,9 +128,13 @@
   display: none;
 }
 
-.page-header__menu--nojs .main-nav {
-  display: block;
+.page-header__menu--nojs .page-header__main-nav {
+  flex-direction: column;
 }
+
+// .page-header__menu--nojs .main-nav {
+//   order: 2;
+// }
 
 .main-nav {
   order: 2;
@@ -155,14 +173,19 @@
   }
 }
 
-.intro {
-  overflow: hidden;
-  background-image: url("../img/bg-back-mobile@1x.jpg");/*Решение проблемы БГ*/
-  margin-top: -70px;/*Решение проблемы БГ*/
+.intro-inner {
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  max-height: 170px;
 }
 
-.intro-inner {
-  max-height: 170px;
+@media (min-resolution: $retina-dpi),
+  (min-resolution: $retina-dppx) {
+  .intro-inner {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+    background-size: 640px auto;
+  }
 }
 
 .intro__title-inner,
@@ -172,12 +195,24 @@
   font-weight: 300;
 }
 
+.page-header__menu--open .intro-inner {
+  background-position: center -67px;
+}
+
+.page-header__menu--close .intro-inner {
+  max-height: 240px;
+}
+
 .intro__title-inner {
   width: 240px;
   margin: 0 auto;
   text-align: center;
   padding-top: 30px;
-  padding-bottom: 85px; /*,???*/
+  padding-bottom: 85px;
+}
+
+.page-header__menu--close .intro__title-inner {
+  padding-top: 100px;
 }
 
 .intro__title {
@@ -186,7 +221,11 @@
 
 .intro__picture {
   display: block;
-  padding-top: 180px;/**После решения проблеммы*/
+  padding-top: 177px;
+}
+
+.page-header__menu--open .intro__picture {
+  padding-top: 110px;
 }
 
 .intro__wrapper {
@@ -208,7 +247,7 @@
   padding: 13px 36px;
 
   &:hover {
-    background: $header-text-color;
+    background-color: $header-text-color;
     color: $decor-color;
   }
 
@@ -218,13 +257,21 @@
 }
 
 .intro__os-list {
-  @include list-default;
   display: flex;
+  list-style: none;
   justify-content: space-between;
-  width: 205px;
+  width: 220px;
   align-items: baseline;
-  margin: 0 auto;
-  margin-top: 45px;
+  margin-left: 10px;
+  margin-top: 40px;
+}
+
+a.intro__link {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
 }
 
 .intro__text {
@@ -235,14 +282,13 @@
 }
 
 @media (min-width: $tablet-width) {
-  .page-header {
+  .page-header__main-nav-wrapper {
     background-image: url("../img/bg-back-tablet@1x.jpg");
-    background-position: center bottom;
   }
 
   @media (min-resolution: $retina-dpi),
     (min-resolution: $retina-dppx) {
-    .page-header {
+    .page-header__main-nav-wrapper {
       background-image: url("../img/bg-back-tablet@2x.jpg");
       background-size: 1200px auto;
     }
@@ -274,9 +320,14 @@
     right: 20px;
   }
 
+  .page-header__menu--nojs .page-header__main-nav {
+    flex-direction: column;
+  }
+
   .page-header__menu-wrapper {
     padding-top: 25px;
-    padding-bottom: 44px;
+    padding-bottom: 37px;
+    width: 660px;
   }
 
   .page-header__menu--close .page-header__menu-wrapper {
@@ -285,25 +336,60 @@
   }
 
   .intro {
-    position: relative;
-    min-height: 620px;
-    background-image: none;
-    margin-top: 0;
+    position: absolute;
+    top: 150px;
+  }
+
+  .page-header__menu--open .intro__picture {
+    padding-top: 75px;
+  }
+
+  .intro__picture {
+    display: block;
+    padding-top: 185px;
+    margin-left: -20px;
   }
 
   .intro-inner {
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-position: center -5px;
     min-height: 330px;
   }
 
+  @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
+    .intro-inner {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+      background-size: 1200px auto;
+    }
+
+    .page-header__menu--open .intro-inner {
+      background-position: center -110px;
+    }
+  }
+
   .intro__title {
+    position: absolute;
     display: block;
     font-size: 40px;
     line-height: 48px;
     width: 200px;
-    position: absolute;
     text-align: center;
-    top: 66px;
+    top: 25px;
     left: 70px;
+  }
+
+  .page-header__menu--open .intro__title {
+    top: 280px;
+  }
+
+  .page-header__menu--close .intro-inner {
+    max-height: 435px;
+  }
+
+  .page-header__menu--close .intro__title-inner {
+    padding-top: 175px;
+    padding-bottom: 140px;
   }
 
   .intro__title-inner {
@@ -317,18 +403,17 @@
     background-color: transparent;
     position: absolute;
     width: 300px;
-    top: 240px;
+    top: 200px;
     left: 20px;
   }
+
+  .page-header__menu--open .intro__wrapper {
+    top: 455px;
+  }
+
   /**??????????????????????????????????????????????????????*/
   img {
     max-width: none;
-  }
-
-  .intro__picture {
-    position: absolute;
-    padding-top: 75px;
-    left: -20px;
   }
 
   .intro__button {
@@ -337,12 +422,13 @@
 
   .intro__os-list {
     margin-top: 57px;
+    margin-left: 0;
   }
 
   .intro__text {
     font-size: 18px;
     line-height: 24px;
-    margin-top: 31px;
+    margin-top: 30px;
     width: auto;
   }
 
@@ -354,6 +440,7 @@
 @media (min-width: $desktop-width) {
   .page-header {
     background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-position: center top;
   }
 
   @media (min-resolution: $retina-dpi),
@@ -362,6 +449,24 @@
       background-image: url("../img/bg-back-desktop@2x.jpg");
       background-size: 2560px auto;
     }
+  }
+
+  .page-header__main-nav-wrapper {
+    background-image: none;
+  }
+
+  .page-header__menu-wrapper {
+    background-color: transparent;
+    position: static;
+  }
+
+  .page-header__menu--close .page-header__main-nav,
+  .page-header__menu--open .page-header__main-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: $header-color;
+    padding: 0 130px;
   }
 
   .page-header__logo-img {
@@ -387,7 +492,7 @@
         bottom: -10px;
         left: 0;
         height: 2px;
-        background: $header-text-color;
+        background-color: $header-text-color;
       }
     }
   }
@@ -408,15 +513,6 @@
   .page-header__menu-toggle-cross,
   .page-header__menu-toggle-burger {
     display: none;
-  }
-
-  .page-header__menu {
-    flex-direction: row;
-    flex-grow: 1;
-    justify-content: space-between;
-    background-color: $header-color;
-    align-items: center;
-    padding: 0 130px;
   }
 
   .page-header__menu--open .page-header__menu-wrapper {
@@ -441,13 +537,13 @@
   .intro__wrapper {
     width: 340px;
     background-color: transparent;
-    top: 315px;
+    top: 275px;
     left: 110px;
   }
 
   .intro__picture {
     padding-top: 100px;
-    left: 145px;
+    margin-left: 145px;
   }
 
   .intro__button {
@@ -456,7 +552,8 @@
   }
 
   .intro__os-list {
-    margin-top: 81px;
+    margin-top: 75px;
+    margin-left: 20px;
   }
 
   .intro__text {
@@ -472,7 +569,8 @@
   }
 
   .intro-inner {
-    min-height: 290px;
+    background-image: none;
+    min-height: 280px;
     margin-bottom: 5px;
   }
 
@@ -482,8 +580,13 @@
     line-height: 60px;
     width: 280px;
     position: absolute;
-    top: 75px;
+    top: 35px;
     left: 140px;
+  }
+
+  .page-header__menu--close .intro__title-inner {
+    padding-top: 65px;
+    padding-bottom: 90px;
   }
 
   .intro__title-inner {

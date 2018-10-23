@@ -5,7 +5,7 @@
 .reviews__list {
   @include list-default;
   position: relative;
-  min-height: 260px;
+  min-height: 255px;
   background-color: $header-text-color;
   margin-top: -42px;
   padding-top: 42px;

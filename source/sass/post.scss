@@ -80,7 +80,7 @@
   appearance: none;
   width: 13px;
   height: 13px;
-  background: $section-background;
+  background-color: $section-background;
   border-radius: 13px;
   border: 2px solid $decor-color;
   cursor: pointer;
@@ -142,7 +142,7 @@
   }
 
   &:active {
-    background: rgba($base-color, 0.3%);
+    background-color: rgba($base-color, 0.3%);
     border: 3px solid rgba($base-color, 0%);
   }
 }
@@ -255,7 +255,7 @@
   .post__wrapper {
     background-color: $section-background;
     padding: 0;
-    margin-bottom: 100px;
+    margin-bottom: 95px;
     display: flex;
   }
 
