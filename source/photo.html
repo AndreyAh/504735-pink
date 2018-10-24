@@ -3,12 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <title>PINK - фото</title>
     <script src="js/picturefill.min.js"></script>
     <script src="js/svg4everybody.js"></script>
   </head>
   <body>
+    <div style="display: none;">
+      <include src="build/img/sprite2.svg"></include>
+    </div>
     <header class="page-header">
       <div class="page-header__menu page-header__menu--close">
         <div class="page-header__main-nav-wrapper">
@@ -185,17 +188,17 @@
               <fieldset class="post-fieldset">
                 <p class="filters__toggles slider__toggles">
                   <button type="button" class="slider__toggle-post">
-                  <svg class="slider__toggle-post-icon" width="44"  height="44">
+                  <svg class="slider__toggle-post-icon" width="44" height="44">
                     <use xlink:href="img/sprite.svg#icon-brightness"></use>
                   </svg>
                   </button>
                   <button type="button" class="slider__toggle-post">
-                  <svg class="slider__toggle-post-icon" width="48"  height="44">
+                  <svg class="slider__toggle-post-icon" width="48" height="44">
                     <use xlink:href="img/sprite.svg#icon-color"></use>
                   </svg>
                   </button>
                   <button type="button" class="slider__toggle-post slider__toggle-post--active">
-                  <svg class="slider__toggle-post-icon slider__toggle-post-icon--active" width="33"  height="33">
+                  <svg class="slider__toggle-post-icon slider__toggle-post-icon--active" width="33" height="33">
                     <use xlink:href="img/sprite.svg#icon-contrast"></use>
                   </svg>
                   </button>
@@ -231,16 +234,16 @@
             <ul class="social__list">
               <li class="social__item">
                 <a class="social__link social__link--twitter" href="https://twitter.com">
-                  <img src="img/icon-twitter.svg"  alt="Логотип Твиттер">
+                  <img src="img/icon-twitter.svg" alt="Логотип Твиттер">
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link social__link--twitter" href="https://ru-ru.facebook.com">
+                <a class="social__link social__link--focebook" href="https://ru-ru.facebook.com">
                   <img src="img/icon-facebook.svg" alt="Логотип Фейсбук">
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link social__link--twitter" href="https://www.youtube.com">
+                <a class="social__link social__link--youtube" href="https://www.youtube.com">
                   <img src="img/icon-youtube.svg" alt="Логотип Ютуб">
                 </a>
               </li>
@@ -248,7 +251,7 @@
           </div>
           <div class="page-footer__copyright copyright">
             <p class="copyright__text">Разработано</p>
-            <a  class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
               <svg class="copyright__link" width="41" height="41">
                 <use xlink:href="img/sprite.svg#logo-html"></use>
               </svg>

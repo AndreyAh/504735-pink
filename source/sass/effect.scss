@@ -10,8 +10,8 @@
     background-image: url("../img/icon-editor-diagram-fill.svg"),
       url("../img/icon-timer.svg");
     background-repeat: no-repeat, no-repeat;
-    background-position: 40px 115px, -30px 60px;
-    background-size: 200px 200px, 340px 275px;
+    background-position: 40px 115px, 20px 60px;
+    background-size: 200px 200px, 240px 275px;
   }
 
   .effect__picture-number {
@@ -64,8 +64,8 @@
   .effect {
     display: block;
     background-color: $section-background;
-    background-position: 150px 105px, 105px 35px;
-    background-size: 255px 253px, 345px 345px;
+    background-position: 150px 105px, 130px 35px;
+    background-size: 255px 253px, 300px 345px;
   }
 
   .effect__info {

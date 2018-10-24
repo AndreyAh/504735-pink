@@ -4,11 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PINK - форма</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <script src="js/picturefill.min.js"></script>
     <script src="js/svg4everybody.js"></script>
   </head>
   <body>
+    <div style="display: none;">
+      <include src="build/img/sprite2.svg"></include>
+    </div>
     <header class="page-header">
       <div class="page-header__menu page-header__menu--close">
         <div class="page-header__main-nav-wrapper">
@@ -55,16 +58,16 @@
     <main class="page-main">
       <section class="form">
         <h2 class="form__title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!<span class="form__title-add"> Пожалуйста, заполните форму ниже:</span></h2>
-        <form  action="https://echo.htmlacademy.ru" method="get" name="personal-data">
+        <form action="https://echo.htmlacademy.ru" method="get" name="personal-data">
           <div class="form__wrapper">
             <fieldset class="form__personal-data">
               <p>
                 <label class="form__label" for="surname">Фамилия</label>
-                <input class="form__input form__input-personal" type="text" name="surname" placeholder="Укажите фамилию *" id="surname" required>
+                <input class="form__input form__input-personal" type="text" name="surname" placeholder="Укажите фамилию *" id="surname" required="">
               </p>
               <p>
                 <label class="form__label" for="name">Имя</label>
-                <input class="form__input form__input-personal" type="text" name="name" placeholder="Введите ваше имя *" id="name" required>
+                <input class="form__input form__input-personal" type="text" name="name" placeholder="Введите ваше имя *" id="name" required="">
               </p>
               <p>
                 <label class="form__label" for="patronymic">Отчество</label>
@@ -72,18 +75,18 @@
               </p>
             </fieldset>
             <fieldset class="form__records">
-              <legend  class="form__legend">Ваши безбашенные достижения в путешествии</legend>
+              <legend class="form__legend">Ваши безбашенные достижения в путешествии</legend>
               <div class="form__input-wrapper">
                 <div class="form__input-wrapper-couple">
                   <p>
                     <label class="form__records-label">
-                      <input class="form__input visualy-hidden" type="checkbox" name="records" checked>Сделал селфи с акулой
+                      <input class="form__input visualy-hidden" type="checkbox" name="records" checked="">Сделал селфи с акулой
                       <span class="checkbox-indicator"></span>
                     </label>
                   </p>
                   <p>
                     <label class="form__records-label">
-                      <input class="form__input visualy-hidden" type="checkbox" name="records" checked>Обгорел на пляже
+                      <input class="form__input visualy-hidden" type="checkbox" name="records" checked="">Обгорел на пляже
                       <span class="checkbox-indicator"></span>
                     </label>
                   </p>
@@ -105,7 +108,7 @@
                 <div class="form__input-wrapper-couple">
                   <p>
                     <label class="form__records-label">
-                      <input class="form__input visualy-hidden" type="checkbox" name="records" checked>Удержал башню
+                      <input class="form__input visualy-hidden" type="checkbox" name="records" checked="">Удержал башню
                       <span class="checkbox-indicator"></span>
                     </label>
                   </p>
@@ -119,7 +122,7 @@
               </div>
             </fieldset>
             <fieldset class="form__contacts">
-              <legend  class="form__legend">Контактная информация</legend>
+              <legend class="form__legend">Контактная информация</legend>
               <div class="form__contacts-wrapper">
                 <p>
                   <label for="phone" class="form__label form__label-contacts">Номер телефона</label>
@@ -127,11 +130,11 @@
                 </p>
                 <p>
                   <label for="mail" class="form__label form__label-contacts">Адрес почты</label>
-                  <input class="form__input form__input-contacts" type="email" id="mail" placeholder="Введите почту *" required>
+                  <input class="form__input form__input-contacts" type="email" id="mail" placeholder="Введите почту *" required="">
                 </p>
               </div>
             </fieldset>
-            <fieldset class="form__app-type" >
+            <fieldset class="form__app-type">
               <legend class="form__legend">С каким приложением путешествовали?</legend>
               <div class="form__input-wrapper">
                 <p>
@@ -156,8 +159,8 @@
               </div>
             </fieldset>
             <fieldset class="form__emotion">
-              <legend  class="form__label form__label--emotion">Опишите свои эмоции</legend>
-              <textarea class="form__input form__input-text" name="emotion" cols="25" rows="6" placeholder = "Можно прям в красках, не стесняясь в выражениях"></textarea>
+              <legend class="form__label form__label--emotion">Опишите свои эмоции</legend>
+              <textarea class="form__input form__input-text" name="emotion" cols="25" rows="6" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
             </fieldset>
             <div class="form__send">
               <input class="form__button" type="submit" value="Отправить форму">
@@ -183,12 +186,12 @@
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link social__link--twitter" href="https://ru-ru.facebook.com">
+                <a class="social__link social__link--facebook" href="https://ru-ru.facebook.com">
                   <img src="img/icon-facebook.svg" alt="Логотип Фейсбук">
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link social__link--twitter" href="https://www.youtube.com">
+                <a class="social__link social__link--youtube" href="https://www.youtube.com">
                   <img src="img/icon-youtube.svg" alt="Логотип Ютуб">
                 </a>
               </li>
@@ -196,7 +199,7 @@
           </div>
           <div class="page-footer__copyright copyright">
             <p class="copyright__text">Разработано</p>
-            <a  class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
               <svg class="copyright__link" width="41" height="41">
                 <use xlink:href="img/sprite.svg#logo-html"></use>
               </svg>

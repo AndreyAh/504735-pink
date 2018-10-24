@@ -22,10 +22,11 @@
 .social__list {
   @include list-default;
   display: flex;
+  align-items: center;
   width: 180px;
 }
 
-.social__item a {
+.social__item {
   width: 48px;
   height: 48px;
   display: flex;
@@ -44,13 +45,16 @@
   }
 }
 
+.social__link {
+  margin-top: 13px;
+}
+
 .page-footer__copyright {
   line-height: 18px;
   font-size: 14px;
   display: flex;
   align-items: center;
   margin-top: 30px;
-  /*???*/
 }
 
 .copyright__link {
@@ -79,7 +83,11 @@
   }
 
   .social__list {
-    margin-left: 70px;
+    margin-left: 75px;
+  }
+
+  .info__item-text br {
+    display: block;
   }
 
   .page-footer__copyright {
