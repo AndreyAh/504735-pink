@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PINK - главная</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <script src="js/picturefill.min.js"></script>
     <script src="js/svg4everybody.js"></script>
   </head>
   <body>
-  <div style="display:none">
-      <include src="source/img/sprite2.svg"></include>
-  </div>
+    <div style="display: none;">
+      <include src="build/img/sprite2.svg"></include>
+    </div>
     <header class="page-header">
       <div class="page-header__menu page-header__menu--nojs page-header__menu--close">
         <div class="page-header__main-nav-wrapper">
@@ -26,8 +26,8 @@
             </nav>
             <div class="page-header__menu-wrapper">
               <picture class="page-header__logo-img">
-                <source srcset="img/logo-pink-white-desktop.svg" media="(min-width: 1200px)"/>
-                <source srcset="img/logo-pink-white-tablet.svg" media="(min-width: 660px)"/>
+                <source srcset="img/logo-pink-white-desktop.svg" media="(min-width: 1200px)">
+                <source srcset="img/logo-pink-white-tablet.svg" media="(min-width: 660px)">
                 <img src="img/logo-pink-white-mobile.svg" alt="Логотип PINK">
               </picture>
               <button class="page-header__menu-toggle-cross" title="Закрыть меню" type="button">
@@ -46,9 +46,9 @@
             <source type="image/webp" media="(min-width: 1200px)" srcset="img/webP/iphone-hand-desktop@1x.webp 1x, img/webP/iphone-hand-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width: 660px )" srcset="img/webP/iphone-hand-tablet@1x.webp 1x, img/webP/iphone-hand-tablet@2x.webp 2x">
             <source type="image/webp" srcset="img/webP/iphone-hand-mobile@1x.webp 1x, img/webP/iphone-hand-mobile@2x.webp 2x">
-            <source media="(min-width: 1200px)" srcset="img/iphone-hand-desktop@1x.png 1x, img/iphone-hand-desktop@2x.png 2x"/>
-            <source media="(min-width: 660px)" srcset="img/iphone-hand-tablet@1x.png 1x, img/iphone-hand-tablet@2x.png 2x"/>
-            <img class="intro__picture" src="img/iphone-hand-mobile@1x.png" srcset="img/iphone-hand-mobile@2x.png 2x" alt="Фото телефона в руке"/>
+            <source media="(min-width: 1200px)" srcset="img/iphone-hand-desktop@1x.png 1x, img/iphone-hand-desktop@2x.png 2x">
+            <source media="(min-width: 660px)" srcset="img/iphone-hand-tablet@1x.png 1x, img/iphone-hand-tablet@2x.png 2x">
+            <img class="intro__picture" src="img/iphone-hand-mobile@1x.png" srcset="img/iphone-hand-mobile@2x.png 2x" alt="Фото телефона в руке">
           </picture>
         </div>
         <div class="intro">
@@ -58,7 +58,7 @@
             <ul class="intro__os-list">
               <li class="intro__os-item intro__os-apple">
                 <a href="https://www.apple.com/ru/itunes/" class="intro__link">
-                  <img src="img/logo-apple.svg"  alt="Иконка Apple">
+                  <img src="img/logo-apple.svg" alt="Иконка Apple">
                 </a>
               </li>
               <li class="intro__os-item intro__os-android">
@@ -97,19 +97,19 @@
                 <img class="info__img-desktop" src="img/iphone-screen-2-desktop@1x.png" srcset="img/iphone-screen-2-desktop@2x.png 2x" alt="Фото iphone">
               </picture>
               <h3 class="info__item-title">Меняет мир вокруг</h3>
-              <p class="info__item-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы <br> усилить эффект</p>
+              <p class="info__item-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы <br>усилить эффект</p>
             </li>
             <li class="info__item">
               <picture>
                 <source type="image/webp" media="(min-width: 1200px)" srcset="img/webP/iphone-screen-3-desktop@1x.webp 1x, img/webP/iphone-screen-3-desktop@2x.webp 2x">
                 <img class="info__img-desktop" width="245" height="300" src="img/iphone-screen-3-desktop@1x.png" srcset="img/iphone-screen-3-desktop@2x.png 2x" alt="Фото iphone">
               </picture>
-              <h3 class="info__item-title">Заводит <br> новых друзей</h3>
+              <h3 class="info__item-title">Заводит<br>новых друзей</h3>
               <p class="info__item-text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
             </li>
           </ul>
           <picture>
-            <source srcset="img/iphone-screen-3-tablet@1x.png 1x, img/iphone-screen-3-tablet@2x.png 2x"  media="(min-width: 660px)"/>
+            <source srcset="img/iphone-screen-3-tablet@1x.png 1x, img/iphone-screen-3-tablet@2x.png 2x" media="(min-width: 660px)">
             <source type="image/webp" media="(min-width: 660px)" srcset="img/webP/iphone-screen-mobile@1x.webp 1x, img/webP/iphone-screen-mobile@2x.webp 2x">
             <img class="info__img" src="img/iphone-screen-mobile@1x.png" srcset="img/iphone-screen-mobile@2x.png 2x" alt="Фото iphone">
           </picture>
@@ -123,7 +123,7 @@
             <p class="effect__info-text">Британские ученые провели исследования и доказали,
               что положительный эффект<br> от использования приложения длится целые сутки!
             </p>
-            <a  class="effect__info-link" href="#">Узнать больше об исследовании</a>
+            <a class="effect__info-link" href="#">Узнать больше об исследовании</a>
           </div>
         </div>
       </section>
@@ -179,7 +179,7 @@
         <div class="slider__price">
           <h2 class="visualy-hidden">Цены</h2>
           <table class="price__list">
-            <thead >
+            <thead>
               <tr>
                 <td class="price__tariff"></td>
                 <td class="price__tariff">База <br><span class="price__value">1,99 USD</span></td>
@@ -238,9 +238,9 @@
           </li>
         </ul>
         <div class="contacts-triangle"></div>
-        <iframe class="contacts__map-mobile" src="https://yandex.ru/map-widget/v1/?um=constructor%3Af8f66720e643098642e85bc87e15133566bfc2e52ef9ba55fa436498b24ee0f6&amp;source=constructor" width="320" height="240"></iframe>
-        <iframe class="contacts__map-tablet" src="https://yandex.ru/map-widget/v1/?um=constructor%3A1390ebd29c84d847678aff4f793ed5bfa45a011fbe43cc7b7fd858a47fdaf5b8&amp;source=constructor" width="660" height="372" ></iframe>
-        <iframe class="contacts__map-desktop" src="https://yandex.ru/map-widget/v1/?um=constructor%3Af8f66720e643098642e85bc87e15133566bfc2e52ef9ba55fa436498b24ee0f6&amp;source=constructor" width="1200" height="500" ></iframe>
+        <iframe class="contacts__map-mobile" src="https://yandex.ru/map-widget/v1/?um=constructor%3Af8f66720e643098642e85bc87e15133566bfc2e52ef9ba55fa436498b24ee0f6&amp;source=constructor" width="320" height="240" frameborder="0"></iframe>
+        <iframe class="contacts__map-tablet" src="https://yandex.ru/map-widget/v1/?um=constructor%3A1390ebd29c84d847678aff4f793ed5bfa45a011fbe43cc7b7fd858a47fdaf5b8&amp;source=constructor" width="660" height="372" frameborder="0"></iframe>
+        <iframe class="contacts__map-desktop" src="https://yandex.ru/map-widget/v1/?um=constructor%3Af8f66720e643098642e85bc87e15133566bfc2e52ef9ba55fa436498b24ee0f6&amp;source=constructor" width="1200" height="500" frameborder="0"></iframe>
       </section>
       <footer class="page-footer">
         <div class="container">
@@ -258,12 +258,12 @@
                   </a>
                 </li>
                 <li class="social__item">
-                  <a class="social__link social__link--twitter" href="https://ru-ru.facebook.com">
+                  <a class="social__link social__link--facebook" href="https://ru-ru.facebook.com">
                     <img src="img/icon-facebook.svg" alt="Логотип Фейсбук">
                   </a>
                 </li>
                 <li class="social__item">
-                  <a class="social__link social__link--twitter" href="https://www.youtube.com">
+                  <a class="social__link social__link--youtube" href="https://www.youtube.com">
                     <img src="img/icon-youtube.svg" alt="Логотип Ютуб">
                   </a>
                 </li>
@@ -271,8 +271,8 @@
             </div>
             <div class="page-footer__copyright copyright">
               <p class="copyright__text">Разработано</p>
-              <a  class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-                <svg class="copyright__link" width="45" height="45">
+              <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+                <svg class="copyright__link" width="41" height="41">
                   <use xlink:href="img/sprite.svg#logo-html"></use>
                 </svg>
               </a>
