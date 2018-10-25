@@ -1,6 +1,6 @@
 .modal {
   position: absolute;
-  top: 70%;
+  top: 200%;
   left: 0;
   z-index: 30;
 
@@ -8,7 +8,6 @@
   width: 320px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   background-color: $header-text-color;
-  /*360px*/
   margin-bottom: 30px;
   margin-top: 30px;
   display: none;
@@ -66,7 +65,7 @@
 @media (min-width: $tablet-width) {
   .modal {
     width: 460px;
-    top: 77%;
+    top: 250%;
     left: 15%;
   }
 
@@ -99,7 +98,7 @@
 @media (min-width: $desktop-width) {
   .modal {
     width: 780px;
-    top: 60%;
+    top: 120%;
     left: 17.5%;
   }
 

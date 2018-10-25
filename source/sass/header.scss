@@ -63,12 +63,10 @@
 /*Начало логики меню*/
 .page-header__menu--open .page-header__menu-toggle-cross {
   position: absolute;
-  top: 10px;
-  right: 3px;
+  top: 20px;
+  right: 13px;
   background-color: transparent;
   border: none;
-  width: 50px;
-  height: 25px;
   cursor: pointer;
   fill: $header-text-color;
 
@@ -99,12 +97,10 @@
 
 .page-header__menu--close .page-header__menu-toggle-burger {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 22px;
+  right: 15px;
   background-color: transparent;
   border: none;
-  width: 50px;
-  height: 25px;
   cursor: pointer;
   fill: $header-text-color;
 
@@ -131,10 +127,6 @@
 .page-header__menu--nojs .page-header__main-nav {
   flex-direction: column;
 }
-
-// .page-header__menu--nojs .main-nav {
-//   order: 2;
-// }
 
 .main-nav {
   order: 2;
@@ -306,13 +298,13 @@ a.intro__link {
   }
 
   .page-header__menu--open .page-header__menu-toggle-cross {
-    top: 22px;
-    right: 2px;
+    top: 40px;
+    right: 10px;
   }
 
   .page-header__menu--close .page-header__menu-toggle-burger {
-    top: 22px;
-    right: 10px;
+    top: 38px;
+    right: 15px;
   }
 
   .page-header__menu--nojs .page-header__menu-toggle-burger {
@@ -325,14 +317,19 @@ a.intro__link {
   }
 
   .page-header__menu-wrapper {
-    padding-top: 25px;
-    padding-bottom: 37px;
+    padding-top: 20px;
+    padding-bottom: 45px;
     width: 660px;
   }
 
+  .page-header__menu-wrapper a {
+    display: block;
+    width: 146px;
+  }
+
   .page-header__menu--close .page-header__menu-wrapper {
-    padding-top: 25px;
-    padding-bottom: 37px;
+    padding-top: 20px;
+    padding-bottom: 45px;
   }
 
   .intro {
@@ -522,6 +519,8 @@ a.intro__link {
 
   .page-header__menu--close .page-header__menu-wrapper {
     padding-left: 0;
+    padding-top: 25px;
+    padding-bottom: 45px;
   }
 
   .page-header__menu--close .main-nav {

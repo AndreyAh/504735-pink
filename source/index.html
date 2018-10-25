@@ -4,14 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PINK - главная</title>
+    <link rel="preload" href="fonts/opensanslight.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
     <link rel="stylesheet" href="css/style.min.css">
     <script src="js/picturefill.min.js"></script>
     <script src="js/svg4everybody.js"></script>
   </head>
   <body>
-    <div style="display: none;">
-      <include src="build/img/sprite2.svg"></include>
-    </div>
     <header class="page-header">
       <div class="page-header__menu page-header__menu--nojs page-header__menu--close">
         <div class="page-header__main-nav-wrapper">
@@ -31,12 +30,12 @@
                 <img src="img/logo-pink-white-mobile.svg" alt="Логотип PINK">
               </picture>
               <button class="page-header__menu-toggle-cross" title="Закрыть меню" type="button">
-              <svg class="page-header__menu-toggle-cross" width="24" height="24">
+              <svg width="24" height="24">
                 <use xlink:href="img/sprite.svg#icon-cross"></use>
               </svg>
               <span class="visualy-hidden">Открыть меню</span></button>
               <button class="page-header__menu-toggle-burger" title="Открыть меню" type="button">
-              <svg class="page-header__menu-toggle-burger" width="50" height="24">
+              <svg width="50" height="24">
                 <use xlink:href="img/sprite.svg#icon-burger"></use>
               </svg>
               <span class="visualy-hidden">Открыть меню</span></button>
@@ -238,9 +237,9 @@
           </li>
         </ul>
         <div class="contacts-triangle"></div>
-        <iframe class="contacts__map-mobile" src="https://yandex.ru/map-widget/v1/?um=constructor%3Af8f66720e643098642e85bc87e15133566bfc2e52ef9ba55fa436498b24ee0f6&amp;source=constructor" width="320" height="240" frameborder="0"></iframe>
-        <iframe class="contacts__map-tablet" src="https://yandex.ru/map-widget/v1/?um=constructor%3A1390ebd29c84d847678aff4f793ed5bfa45a011fbe43cc7b7fd858a47fdaf5b8&amp;source=constructor" width="660" height="372" frameborder="0"></iframe>
-        <iframe class="contacts__map-desktop" src="https://yandex.ru/map-widget/v1/?um=constructor%3Af8f66720e643098642e85bc87e15133566bfc2e52ef9ba55fa436498b24ee0f6&amp;source=constructor" width="1200" height="500" frameborder="0"></iframe>
+        <iframe class="contacts__map-mobile" src="https://yandex.ru/map-widget/v1/?um=constructor%3Af8f66720e643098642e85bc87e15133566bfc2e52ef9ba55fa436498b24ee0f6&amp;source=constructor" width="320" height="240" ></iframe>
+        <iframe class="contacts__map-tablet" src="https://yandex.ru/map-widget/v1/?um=constructor%3A1390ebd29c84d847678aff4f793ed5bfa45a011fbe43cc7b7fd858a47fdaf5b8&amp;source=constructor" width="660" height="372" ></iframe>
+        <iframe class="contacts__map-desktop" src="https://yandex.ru/map-widget/v1/?um=constructor%3Af8f66720e643098642e85bc87e15133566bfc2e52ef9ba55fa436498b24ee0f6&amp;source=constructor" width="1200" height="500"></iframe>
       </section>
       <footer class="page-footer">
         <div class="container">
@@ -248,6 +247,9 @@
             <a class="page-footer__link" href="index.html">
               <svg class="page-footer__logo-img" width="150" height="42">
                 <use xlink:href="img/sprite.svg#footer-logo"></use>
+              </svg>
+              <svg class="page-footer__logo-img-desktop" width="150" height="42">
+                <use xlink:href="img/sprite.svg#logo-pink-blue-desktop"></use>
               </svg>
             </a>
             <div class="page-footer__social social">
