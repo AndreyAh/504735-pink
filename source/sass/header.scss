@@ -63,12 +63,10 @@
 /*Начало логики меню*/
 .page-header__menu--open .page-header__menu-toggle-cross {
   position: absolute;
-  top: 10px;
-  right: 3px;
+  top: 20px;
+  right: 13px;
   background-color: transparent;
   border: none;
-  width: 50px;
-  height: 25px;
   cursor: pointer;
   fill: $header-text-color;
 
@@ -99,12 +97,10 @@
 
 .page-header__menu--close .page-header__menu-toggle-burger {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 22px;
+  right: 15px;
   background-color: transparent;
   border: none;
-  width: 50px;
-  height: 25px;
   cursor: pointer;
   fill: $header-text-color;
 
@@ -132,9 +128,21 @@
   flex-direction: column;
 }
 
-// .page-header__menu--nojs .main-nav {
-//   order: 2;
-// }
+.page-header__menu--nojs .main-nav {
+  display: block;
+  background-color: $base-color;
+  // margin-bottom: -1px;
+}
+
+.page-header__menu--nojs .page-header__menu-wrapper {
+  display: block;
+  position: static;
+  background-color: $base-color;
+}
+
+.page-header__menu--nojs .intro__picture {
+  padding-top: 115px;
+}
 
 .main-nav {
   order: 2;
@@ -306,13 +314,13 @@ a.intro__link {
   }
 
   .page-header__menu--open .page-header__menu-toggle-cross {
-    top: 22px;
-    right: 2px;
+    top: 40px;
+    right: 10px;
   }
 
   .page-header__menu--close .page-header__menu-toggle-burger {
-    top: 22px;
-    right: 10px;
+    top: 38px;
+    right: 15px;
   }
 
   .page-header__menu--nojs .page-header__menu-toggle-burger {
@@ -325,13 +333,18 @@ a.intro__link {
   }
 
   .page-header__menu-wrapper {
-    padding-top: 25px;
+    padding-top: 20px;
     padding-bottom: 37px;
     width: 660px;
   }
 
+  .page-header__menu-wrapper a {
+    display: block;
+    width: 146px;
+  }
+
   .page-header__menu--close .page-header__menu-wrapper {
-    padding-top: 25px;
+    padding-top: 20px;
     padding-bottom: 37px;
   }
 
@@ -351,6 +364,7 @@ a.intro__link {
   }
 
   .intro-inner {
+    background-color: $base-color;
     background-image: url("../img/bg-back-tablet@1x.jpg");
     background-position: center -5px;
     min-height: 330px;
@@ -380,7 +394,7 @@ a.intro__link {
   }
 
   .page-header__menu--open .intro__title {
-    top: 280px;
+    top: 276px;
   }
 
   .page-header__menu--close .intro-inner {
@@ -407,8 +421,20 @@ a.intro__link {
     left: 20px;
   }
 
+  .page-header__menu--nojs .intro__picture {
+    padding-top: 75px;
+  }
+
+  .page-header__menu--nojs .intro-title {
+    top: 76px;
+  }
+
+  .page-header__menu--nojs .intro-wrapper {
+    top: 149px;
+  }
+
   .page-header__menu--open .intro__wrapper {
-    top: 455px;
+    top: 450px;
   }
 
   /**??????????????????????????????????????????????????????*/
@@ -439,6 +465,7 @@ a.intro__link {
 
 @media (min-width: $desktop-width) {
   .page-header {
+    background-color: $base-color;
     background-image: url("../img/bg-back-desktop@1x.jpg");
     background-position: center top;
   }
@@ -522,6 +549,8 @@ a.intro__link {
 
   .page-header__menu--close .page-header__menu-wrapper {
     padding-left: 0;
+    padding-top: 35px;
+    padding-bottom: 35px;
   }
 
   .page-header__menu--close .main-nav {
@@ -537,7 +566,7 @@ a.intro__link {
   .intro__wrapper {
     width: 340px;
     background-color: transparent;
-    top: 275px;
+    top: 280px;
     left: 110px;
   }
 
@@ -570,6 +599,7 @@ a.intro__link {
 
   .intro-inner {
     background-image: none;
+    background-color: transparent;
     min-height: 280px;
     margin-bottom: 5px;
   }
@@ -580,7 +610,7 @@ a.intro__link {
     line-height: 60px;
     width: 280px;
     position: absolute;
-    top: 35px;
+    top: 40px;
     left: 140px;
   }
 

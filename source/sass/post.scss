@@ -56,18 +56,6 @@
   }
 }
 
-.post__filters {
-  position: absolute;
-  top: 90px;
-  left: 35px;
-  width: 240px;
-  appearance: none;
-  height: 0;
-  outline: none;
-  border: 1px solid $base-color;
-  background-color: $base-color;
-}
-
 .post__label--contrast {
   display: none;
 }
@@ -75,6 +63,28 @@
 .post__label--brightness {
   display: none;
 }
+
+.post__filters {
+  position: absolute;
+  top: 90px;
+  left: 35px;
+  width: 238px;
+  appearance: none;
+  height: 0;
+  outline: none;
+  border: 1px solid $base-color;
+}
+
+// .post__filters--edge  { /*Это свойство показываеет: ~дефолтное в IE11 и только бегунок(стилизованный) в EDge!!! */
+//   position: absolute;
+//   top: 70px;
+//   left: 35px;
+//   width: 238px;
+//   appearance: none;
+//   height: 15px;
+//   outline: none;
+//   border: none;
+// }
 
 .post__filters::-webkit-slider-thumb {
   appearance: none;
@@ -90,6 +100,83 @@
     background-color: $decor-color;
   }
 }
+
+.post__filters::-moz-range-track {
+  position: absolute;
+  top: 90px;
+  left: 35px;
+  width: 238px;
+  appearance: none;
+  height: 0;
+  outline: none;
+  border: 1px solid $base-color;
+}
+
+.post__filters::-moz-range-thumb {
+  appearance: none;
+  width: 13px;
+  height: 13px;
+  background-color: $section-background;
+  border-radius: 13px;
+  border: 2px solid $decor-color;
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    background-color: $decor-color;
+  }
+}
+
+// .post__filters::-ms-track {   /*Эти сва вообще не работают!!!нигде*/
+//   position: absolute;
+//   top: 90px;
+//   left: 35px;
+//   width: 238px;
+//   appearance: none;
+//   height: 50px;
+//   outline: none;
+//   border: 1px solid $base-color;
+//   background-color: $base-color;
+// }
+
+// .post__filters::-ms-fill-lower {   /*Эти сва вообще не работают!!!нигде*/
+//   position: absolute;
+//   top: 90px;
+//   left: 35px;
+//   width: 238px;
+//   appearance: none;
+//   height: 50px;
+//   outline: none;
+//   border: 1px solid $base-color;
+//   background-color: $base-color;
+// }
+
+// .post__filters::-ms-fill-upper {   /*Эти сва вообще не работают!!!нигде*/
+//   position: absolute;
+//   top: 90px;
+//   left: 35px;
+//   width: 238px;
+//   appearance: none;
+//   height: 50px;
+//   outline: none;
+//   border: 10px solid $base-color;
+//   background-color: $base-color;
+// }
+
+// .post__filters::-ms-thumb {  Нигде
+//   appearance: none;
+//   width: 13px;
+//   height: 20px;
+//   background-color: $section-background;
+//   border-radius: 13px;
+//   border: 5px solid $decor-color;
+//   cursor: pointer;
+
+//   &:hover,
+//   &:active {
+//     background-color: $decor-color;
+//   }
+// }
 
 .form-wrapper {
   margin-top: 36px;
@@ -222,7 +309,16 @@
     height: 0;
     outline: none;
     border: 1px solid $base-color;
-    background-color: $base-color;
+  }
+
+  .post__filters::-moz-range-track {
+    position: static;
+    appearance: none;
+    width: 198px;
+    height: 0;
+    outline: none;
+    border: 1px solid $base-color;
+    border-top: none;
   }
 
   .post-buttons {

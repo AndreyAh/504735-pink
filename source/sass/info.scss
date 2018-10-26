@@ -109,6 +109,10 @@
     display: none;
   }
 
+  .info__item-text br {
+    display: block;
+  }
+
   .info__img-desktop {
     display: none;
   }
@@ -170,7 +174,7 @@
     margin-top: 25px;
   }
 
-  .info__item .info__item-text br {
+  .info__item-text br {
     display: none;
   }
 

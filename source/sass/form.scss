@@ -53,8 +53,9 @@
   margin-bottom: 5px;
 
   &--emotion {
-    text-align: center;
+    margin: 0 auto;
     padding-left: 0;
+    margin-bottom: -10px;
   }
 }
 
@@ -88,7 +89,7 @@
 .form__input-text,
 .form__input-contacts,
 .form__input-personal {
-  margin-left: 20px;/*Почему не работает Auto???????*/
+  margin-left: 20px;
   width: 280px;
   height: 62px;
   padding-left: 21px;
@@ -97,6 +98,7 @@
 
 .form__input-text {
   height: auto;
+  padding-top: 15px;
 }
 
 .form__records,
@@ -286,6 +288,12 @@
   .form__label {
     padding-left: 0;
     margin-bottom: 15px;
+
+    &--emotion {
+      padding-left: 40px;
+      padding-right: 40px;
+      margin-bottom: 1px;
+    }
   }
 
   .form__input {
@@ -304,10 +312,23 @@
 
   .form__legend {
     position: static;
-    text-align: center;
+    margin: 0 auto;
     width: auto;
-    padding-left: 20px;
-    padding-right: 20px;
+
+    &--app-type {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+
+    &--contacts {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    &--records {
+      padding-left: 35px;
+      padding-right: 35px;
+    }
   }
 
   .form__contacts .form__legend {
@@ -319,7 +340,6 @@
     padding-left: 80px;
   }
 
-  /*???*/
   .form .form__personal-data {
     order: 1;
     border: none;
@@ -350,29 +370,37 @@
     display: flex;
     flex-direction: column-reverse;
     margin-bottom: 25px;
+  }
 
-    &::before { /*???????????????????????????*/
+  .form__contacts-number {
+    position: relative;
+
+    &::before {
       content: "";
       position: absolute;
-      top: 188px;
-      right: 60px;
-      width: 60px;
-      height: 60px;
-      background-color: $form-border-color;
-      background-image: url("../img/icon-mail.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 55px;
+      top: 0;
       right: 60px;
       width: 60px;
       height: 60px;
       background-color: $form-border-color;
       background-image: url("../img/icon-phone.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  .form__contacts-mail {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 60px;
+      width: 60px;
+      height: 60px;
+      background-color: $form-border-color;
+      background-image: url("../img/icon-mail.svg");
       background-repeat: no-repeat;
       background-position: center;
     }
@@ -405,7 +433,7 @@
     margin: 0 auto;
     margin-top: 0;
     margin-bottom: 50px;
-    padding-top: 5px;
+    padding-top: 10px;
   }
 
   .form__send {
@@ -413,7 +441,7 @@
     align-items: center;
     justify-content: space-between;
     order: 6;
-    margin-top: 45px;
+    margin-top: 40px;
     margin-bottom: 30px;
   }
 
@@ -435,7 +463,7 @@
 
   .form__title {
     width: 760px;
-    margin-top: 95px;
+    margin-top: 90px;
     margin-bottom: 70px;
   }
 
@@ -446,6 +474,7 @@
   .form__wrapper {
     flex-direction: row;
     flex-wrap: wrap;
+    margin-bottom: 70px;
   }
 
   .form__personal-data {
@@ -484,6 +513,10 @@
     display: block;
   }
 
+  .form__records-label {
+    margin-bottom: 55px;
+  }
+
   .form__contacts-wrapper {
     display: flex;
     padding-top: 10px;
@@ -495,17 +528,17 @@
 
   .form__input-contacts {
     width: 375px;
-    margin-left: 60px;
+    margin-left: 65px;
   }
 
-  .form__contacts p::after {
-    top: 45px;
-    right: 68px;
-  }
+  // .form__contacts p::after {
+  //   top: 0;
+  //   right: 62px;
+  // }
 
   .form__contacts p::before {
-    top: 45px;
-    left: 373px;
+    top: 0;
+    left: 378px;
   }
 
   .form__input-wrapper {
@@ -533,17 +566,21 @@
     margin: 0 auto;
   }
 
+  .form__label--emotion {
+    margin-bottom: 5px;
+  }
+
   .form__input-text {
     width: 820px;
-    margin: 0 auto;
+    height: 125px;
+    margin: 5px auto;
     margin-bottom: 45px;
-    height: 130px;
   }
 
   .form__send {
     width: 940px;
     margin: 0 auto;
-    margin-top: 60px;
+    margin-top: 65px;
   }
 
   .form__descript {
