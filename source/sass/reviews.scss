@@ -51,12 +51,18 @@
     min-height: 240px;
   }
 
+  .reviews__item {
+    width: 620px;
+    display: flex;
+    flex-direction: column;
+  }
+
   .reviews__item-text {
     font-size: 18px;
   }
 
   .reviews__item-name {
-    order: 1;
+    order: 2;
     font-size: 20px;
     margin-top: 17px;
     margin-bottom: 5px;
@@ -93,6 +99,7 @@
 
   .reviews__item {
     margin-top: -10px;
+    width: 730px;
   }
 
   .reviews__item-name {
