@@ -32,7 +32,7 @@
 .filters__toggles {
   width: 220px;
   margin: 0 auto;
-
+  margin-bottom: 25px;
   display: flex;
 }
 
@@ -65,61 +65,55 @@
 }
 
 .post__filters {
-  position: absolute;
-  top: 90px;
-  left: 35px;
-  width: 238px;
   appearance: none;
-  height: 0;
-  outline: none;
-  border: 1px solid $base-color;
+  border: 1px solid white;
+  width: 242px;
 }
 
-// .post__filters--edge  { /*Это свойство показываеет: ~дефолтное в IE11 и только бегунок(стилизованный) в EDge!!! */
-//   position: absolute;
-//   top: 70px;
-//   left: 35px;
-//   width: 238px;
-//   appearance: none;
-//   height: 15px;
-//   outline: none;
-//   border: none;
-// }
+.post__label {
+  margin-left: 35px;
+}
+
+.post__filters::-webkit-slider-runnable-track {
+  height: 2px;
+  background: $base-color;
+  border: none;
+  border-radius: 3px;
+}
 
 .post__filters::-webkit-slider-thumb {
   appearance: none;
-  width: 13px;
   height: 13px;
-  background-color: $section-background;
-  border-radius: 13px;
+  width: 13px;
+  border-radius: 50%;
+  background: $section-background;
   border: 2px solid $decor-color;
-  cursor: pointer;
+  margin-top: -5px;
 
   &:hover,
   &:active {
     background-color: $decor-color;
   }
+}
+
+.post__filters:focus {
+  outline: none;
 }
 
 .post__filters::-moz-range-track {
-  position: absolute;
-  top: 90px;
-  left: 35px;
-  width: 238px;
-  appearance: none;
-  height: 0;
-  outline: none;
-  border: 1px solid $base-color;
+  height: 2px;
+  background: $base-color;
+  border: none;
+  border-radius: 3px;
 }
 
 .post__filters::-moz-range-thumb {
-  appearance: none;
-  width: 13px;
-  height: 13px;
-  background-color: $section-background;
-  border-radius: 13px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background: $section-background;
   border: 2px solid $decor-color;
-  cursor: pointer;
+  margin-top: -4px;
 
   &:hover,
   &:active {
@@ -127,56 +121,49 @@
   }
 }
 
-// .post__filters::-ms-track {   /*Эти сва вообще не работают!!!нигде*/
-//   position: absolute;
-//   top: 90px;
-//   left: 35px;
-//   width: 238px;
-//   appearance: none;
-//   height: 50px;
-//   outline: none;
-//   border: 1px solid $base-color;
-//   background-color: $base-color;
-// }
+/*hide the outline behind the border*/
+.post__filters:-moz-focusring {
+  outline: 1px solid white;
+  outline-offset: -1px;
+}
 
-// .post__filters::-ms-fill-lower {   /*Эти сва вообще не работают!!!нигде*/
-//   position: absolute;
-//   top: 90px;
-//   left: 35px;
-//   width: 238px;
-//   appearance: none;
-//   height: 50px;
-//   outline: none;
-//   border: 1px solid $base-color;
-//   background-color: $base-color;
-// }
+.post__filters::-ms-track {
+  width: 268px;
+  height: 2px;
+  /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+  background: transparent;
 
-// .post__filters::-ms-fill-upper {   /*Эти сва вообще не работают!!!нигде*/
-//   position: absolute;
-//   top: 90px;
-//   left: 35px;
-//   width: 238px;
-//   appearance: none;
-//   height: 50px;
-//   outline: none;
-//   border: 10px solid $base-color;
-//   background-color: $base-color;
-// }
+  /*leave room for the larger thumb to overflow with a transparent border */
+  border-color: transparent;
+  border-width: 6px 0;
 
-// .post__filters::-ms-thumb {  Нигде
-//   appearance: none;
-//   width: 13px;
-//   height: 20px;
-//   background-color: $section-background;
-//   border-radius: 13px;
-//   border: 5px solid $decor-color;
-//   cursor: pointer;
+  /*remove default tick marks*/
+  color: transparent;
+}
 
-//   &:hover,
-//   &:active {
-//     background-color: $decor-color;
-//   }
-// }
+.post__filters::-ms-fill-lower {
+  background: $base-color;
+  border-radius: 5px;
+}
+
+.post__filters::-ms-fill-upper {
+  background: $base-color;
+  border-radius: 5px;
+}
+
+.post__filters::-ms-thumb {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background: $section-background;
+  border: 2px solid $decor-color;
+  margin-top: -1px;
+
+  &:hover,
+  &:active {
+    background-color: $decor-color;
+  }
+}
 
 .form-wrapper {
   margin-top: 36px;
@@ -274,6 +261,7 @@
     padding-left: 80px;
     padding-bottom: 30px;
     padding-top: 15px;
+    margin-left: 0;
     display: block;
     border-bottom: 1px solid #dddfe0;
 
@@ -303,22 +291,32 @@
   }
 
   .post__filters {
-    position: static;
+    border: 1px solid $section-background;
+    width: 202px;
+  }
+
+  .post__filters::-webkit-slider-runnable-track {
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  .post__filters::-moz-range-track {
     appearance: none;
-    width: 200px;
+    width: 202px;
     height: 0;
     outline: none;
     border: 1px solid $base-color;
   }
 
-  .post__filters::-moz-range-track {
-    position: static;
-    appearance: none;
-    width: 198px;
-    height: 0;
-    outline: none;
-    border: 1px solid $base-color;
-    border-top: none;
+  .filters__toggles {
+    margin-bottom: 0;
+  }
+
+  .post__filters::-ms-track {
+    padding-top: 5px;
+    margin-left: 0;
+    width: 202px;
+    padding-left: 0;
   }
 
   .post-buttons {
@@ -375,7 +373,7 @@
   .post__label {
     padding-left: 90px;
     padding-top: 25px;
-    padding-bottom: 25px;
+    padding-bottom: 23px;
 
     &--contrast {
       background-position: 5px 20px;
@@ -397,12 +395,20 @@
     width: 290px;
   }
 
+  .post__filters::-ms-track {
+    width: 290px;
+  }
+
+  .post__filters::-moz-range-track {
+    width: 290px;
+  }
+
   .post-buttons {
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-between;
     width: 410px;
-    margin-top: 140px;
+    margin-top: 145px;
     margin-bottom: 60px;
     margin-left: 0;
   }
