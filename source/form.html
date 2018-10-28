@@ -7,12 +7,11 @@
     <link rel="preload" href="fonts/opensanslight.woff2" as="font">
     <link rel="preload" href="fonts/opensansbold.woff2" as="font">
     <link rel="stylesheet" href="css/style.min.css">
-    <script src="js/picturefill.min.js"></script>
-    <script src="js/svg4everybody.js"></script>
   </head>
   <body>
     <header class="page-header">
       <div class="page-header__menu page-header__menu--close">
+      <!-- Для режима без JS добавить класс  page-header__menu--nojs-->
         <div class="page-header__main-nav-wrapper">
           <div class="page-header__main-nav">
             <nav class="main-nav">
@@ -223,6 +222,9 @@
       <button class="modal__button modal__button-fail" type="button" value="Закыть окно">Ок</button>
     </div>
   </section>
+  <script src="js/picturefill.min.js"></script>
+  <script src="js/svg4everybody.js"></script>
+  <script>svg4everybody()</script>
   <script src="js/open-close.js"></script>
   <script src="js/modal.js"></script>
 </body>
