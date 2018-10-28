@@ -543,12 +543,13 @@ a.intro__link {
 
   .page-header__menu--open .page-header__menu-wrapper {
     background-color: transparent;
-    padding: 25px 0 35px 0;
+    padding-top: 25px;
+    padding-bottom: 40px;
   }
 
   .page-header__menu--close .page-header__menu-wrapper {
     padding-left: 0;
-    padding-top: 35px;
+    padding-top: 25px;
     padding-bottom: 35px;
   }
 
@@ -565,7 +566,7 @@ a.intro__link {
   .intro__wrapper {
     width: 340px;
     background-color: transparent;
-    top: 280px;
+    top: 275px;
     left: 110px;
   }
 
@@ -609,12 +610,12 @@ a.intro__link {
     line-height: 60px;
     width: 280px;
     position: absolute;
-    top: 40px;
+    top: 35px;
     left: 140px;
   }
 
   .page-header__menu--close .intro__title-inner {
-    padding-top: 65px;
+    padding-top: 75px;
     padding-bottom: 90px;
   }
 
