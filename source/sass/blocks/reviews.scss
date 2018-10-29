@@ -82,7 +82,7 @@
 @media (min-width: $desktop-width) {
   .reviews {
     background-image: url("../img/icon-quotes.svg");
-    background-position: center 70px;
+    background-position: 445px 75px;
     background-repeat: no-repeat;
   }
 
@@ -140,12 +140,12 @@
   }
 
   .reviews__arrow-prev {
-    top: 217px;
-    left: 10px;
+    top: 215px;
+    left: -5px;
   }
 
   .reviews__arrow-next {
-    top: 217px;
+    top: 215px;
     right: 0;
   }
 }

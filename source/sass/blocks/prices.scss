@@ -5,7 +5,7 @@
   background-repeat: no-repeat;
 }
 
-.slider__price {
+.price__slider {
   position: relative;
   overflow: hidden;
   min-height: 510px;
@@ -41,7 +41,7 @@
   }
 }
 
-.flag__hit {
+.flag {
   position: absolute;
   top: 0;
   left: 0;
@@ -154,7 +154,7 @@
     background-position: center -10px;
   }
 
-  .slider__price {
+  .price__slider {
     position: static;
     min-height: auto;
     padding-top: 100px;
@@ -183,7 +183,7 @@
     }
   }
 
-  .flag__hit {
+  .flag {
     width: 60px;
     height: 60px;
     background-image: url("../img/bg-hit-tablet.svg");
@@ -247,7 +247,9 @@
     background-position: center -5px;
   }
 
-  .slider__price {
+  .price__slider {
+    width: 960px;
+    margin: 0 auto;
     position: static;
     padding-top: 145px;
     padding-bottom: 95px;
@@ -260,7 +262,7 @@
     margin: 0 auto;
   }
 
-  .flag__hit {
+  .flag {
     width: 70px;
     height: 70px;
     background-image: url("../img/bg-hit.svg");

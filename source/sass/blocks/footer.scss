@@ -19,6 +19,10 @@
   }
 }
 
+.page-footer-index {
+  display: none;
+}
+
 .social__list {
   @include list-default;
   margin-left: 10px;
@@ -85,6 +89,10 @@
     margin-top: 35px;
   }
 
+  .page-footer-index {
+    display: block;
+  }
+
   .page-footer__link {
     margin-bottom: 10px;
   }
@@ -110,6 +118,10 @@
 
   .page-footer__logo-img {
     display: none;
+  }
+
+  .page-footer-index {
+    display: block;
   }
 
   .page-footer__logo-img-desktop {
@@ -140,10 +152,16 @@
   .page-footer__copyright {
     margin-top: 0;
     margin-left: auto;
+    width: 155px;
   }
 
   .copyright__text {
     font-size: 18px;
     line-height: 18px;
+    margin-right: 10px;
+  }
+
+  .copyright__link {
+    padding-left: 0;
   }
 }

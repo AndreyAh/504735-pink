@@ -43,14 +43,14 @@
   color: $title-color;
 }
 
+.info__img-desktop {
+  display: none;
+}
+
 .info__img {
   padding-top: 15px;
   display: block;
   margin: 0 auto;
-}
-
-.info__img-desktop {
-  display: none;
 }
 
 .info__item-text br,

@@ -86,7 +86,7 @@ input[type="radio"].visualy-hidden {
 
 @media (min-width: $desktop-width) {
   body {
-    min-width: 1200px;
+    max-width: 1200px;
   }
 
   .container {

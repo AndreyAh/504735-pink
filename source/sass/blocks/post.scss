@@ -29,7 +29,7 @@
   border-bottom: 2px solid #dddfe0;
 }
 
-.filters__toggles {
+.filters {
   width: 220px;
   margin: 0 auto;
   margin-bottom: 25px;
@@ -308,7 +308,7 @@
     border: 1px solid $base-color;
   }
 
-  .filters__toggles {
+  .filters {
     margin-bottom: 0;
   }
 
@@ -338,7 +338,7 @@
 
 @media (min-width: $desktop-width) {
   .post {
-    padding: 0 130px;
+    width: 100%;
     margin-top: 0;
   }
 
@@ -349,21 +349,31 @@
   .post__wrapper {
     background-color: $section-background;
     padding: 0;
+    margin: 0 auto;
     margin-bottom: 95px;
     display: flex;
+    width: 940px;
   }
 
   .slider__toggle-post {
     display: none;
   }
 
+  .post__title {
+    width: 960px;
+    margin: 0 auto;
+    margin-top: 5px;
+  }
+
   .post__img {
-    margin-left: 80px;
+    margin-left: 85px;
+    padding-top: 50px;
   }
 
   .form-wrapper {
     margin-top: 35px;
     margin-left: 90px;
+    width: 100%;
   }
 
   .post-fieldset {

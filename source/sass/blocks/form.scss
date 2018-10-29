@@ -457,14 +457,15 @@
 
 @media (min-width: $desktop-width) {
   .form {
-    width: 960px;
-    padding: 0 120px;
+    width: 940px;
+    padding: 0 10px;
+    margin: 0 auto;
   }
 
   .form__title {
     width: 760px;
-    margin-top: 95px;
-    margin-bottom: 70px;
+    margin-top: 100px;
+    margin-bottom: 65px;
   }
 
   .form__title-add {
@@ -479,12 +480,12 @@
 
   .form__personal-data {
     width: 435px;
-    margin-left: 10px;
+    margin-left: 0;
   }
 
   .form__app-type {
     margin-left: 70px;
-    width: 430px;
+    width: 420px;
   }
 
   .form__app-type-label {
@@ -515,6 +516,8 @@
 
   .form__records-label {
     margin-bottom: 55px;
+    margin-left: 10px;
+    padding-left: 75px;
   }
 
   .form__contacts-wrapper {
@@ -530,11 +533,6 @@
     width: 375px;
     margin-left: 65px;
   }
-
-  // .form__contacts p::after {
-  //   top: 0;
-  //   right: 62px;
-  // }
 
   .form__contacts p::before {
     top: 0;
