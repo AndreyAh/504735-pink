@@ -8,9 +8,9 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__menu page-header__menu--close">
-      <!-- Для режима без JS добавить класс  page-header__menu--nojs-->
-        <div class="page-header__main-nav-wrapper">
+      <div class="page-header__menu page-header__menu--close page-header__menu--nojs">
+      <div class="page-header__main-nav-wrapper">
+        <div class="page-header__main-nav-wrapper-top">
           <div class="page-header__main-nav">
             <nav class="main-nav">
               <ul class="main-nav__list">
@@ -37,6 +37,7 @@
               </svg>
               <span class="visualy-hidden">Открыть меню</span></button>
             </div>
+            </div>
           </div>
           <picture>
             <source type="image/webp" media="(min-width: 960px)" srcset="img/webP/iphone-hand-desktop@1x.webp 1x, img/webP/iphone-hand-desktop@2x.webp 2x">
@@ -44,7 +45,7 @@
             <source type="image/webp" srcset="img/webP/iphone-hand-mobile@1x.webp 1x, img/webP/iphone-hand-mobile@2x.webp 2x">
             <source media="(min-width: 960px)" srcset="img/iphone-hand-desktop@1x.png 1x, img/iphone-hand-desktop@2x.png 2x">
             <source media="(min-width: 660px)" srcset="img/iphone-hand-tablet@1x.png 1x, img/iphone-hand-tablet@2x.png 2x">
-            <img class="intro__picture" src="img/iphone-hand-mobile@1x.png" srcset="img/iphone-hand-mobile@2x.png 2x" alt="Фото телефона в руке">
+            <img class="page-header__picture" src="img/iphone-hand-mobile@1x.png" srcset="img/iphone-hand-mobile@2x.png 2x" alt="Фото телефона в руке">
           </picture>
         </div>
         <div class="intro">
@@ -100,7 +101,7 @@
                 <source type="image/webp" media="(min-width: 960px)" srcset="img/webP/iphone-screen-3-desktop@1x.webp 1x, img/webP/iphone-screen-3-desktop@2x.webp 2x">
                 <img class="info__img-desktop" width="245" height="300" src="img/iphone-screen-3-desktop@1x.png" srcset="img/iphone-screen-3-desktop@2x.png 2x" alt="Фото iphone">
               </picture>
-              <h3 class="info__item-title">Заводит<br>новых друзей</h3>
+              <h3 class="info__item-title">Заводит<br> новых друзей</h3>
               <p class="info__item-text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
             </li>
           </ul>
@@ -127,7 +128,7 @@
         <div class="container">
           <div class="slider__reviews">
             <h2 class="visualy-hidden">Отзывы о приложении</h2>
-            <div class="reviews__list slider__list">
+            <div class="reviews__list slider">
               <blockquote class="reviews__item slider__item">
                 <cite class="reviews__item-name">Николай Петров </cite>
                 <p class="reviews__item-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в
@@ -153,8 +154,8 @@
                 </p>
               </blockquote>
             </div>
-            <p class="reviews__toggles slider__toggles">
-              <button type="button" class="slider__toggle-rew slider__toggle--active"><span class="bullets bullets--active"></span></button>
+            <p class="reviews__toggles slider">
+              <button type="button" class="slider__toggle-rew"><span class="bullets bullets--active"></span></button>
               <button type="button" class="slider__toggle-rew"><span class="bullets"></span></button>
               <button type="button" class="slider__toggle-rew"><span class="bullets"></span></button>
             </p>
@@ -172,14 +173,14 @@
         </div>
       </section>
       <section class="price">
-        <div class="slider__price">
+        <div class="price__slider">
           <h2 class="visualy-hidden">Цены</h2>
           <table class="price__list">
             <thead>
               <tr>
                 <td class="price__tariff"></td>
                 <td class="price__tariff">База <br><span class="price__value">1,99 USD</span></td>
-                <td class="price__tariff"><span class="flag__hit"><span class="flag__hit-text">хит</span></span>Стандарт <br><span class="price__value">3,99 USD</span></td>
+                <td class="price__tariff"><span class="flag"><span class="flag__hit-text">хит</span></span>Стандарт <br><span class="price__value">3,99 USD</span></td>
                 <td class="price__tariff">Анлим <br><span class="price__value">9,99 USD</span></td>
               </tr>
             </thead>
@@ -234,11 +235,9 @@
           </li>
         </ul>
         <div class="contacts-triangle"></div>
-        <iframe class="contacts__map-mobile" src="https://yandex.ru/map-widget/v1/?um=constructor%3Adbad50f59ced85adf762c0fa870e370b7470d87b64632dda709b03874311b5c2&amp;source=constructor" width="320" height="614"></iframe>
-        <iframe class="contacts__map-tablet" src="https://yandex.ru/map-widget/v1/?um=constructor%3Adbad50f59ced85adf762c0fa870e370b7470d87b64632dda709b03874311b5c2&amp;source=constructor" width="660" height="720"></iframe>
-        <iframe class="contacts__map-desktop" src="https://yandex.ru/map-widget/v1/?um=constructor%3Adbad50f59ced85adf762c0fa870e370b7470d87b64632dda709b03874311b5c2&amp;source=constructor" width="1200" height="720"></iframe>
+        <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Adbad50f59ced85adf762c0fa870e370b7470d87b64632dda709b03874311b5c2&amp;source=constructor" width="320" height="614"></iframe>
       </section>
-      <footer class="page-footer">
+      <footer class="page-footer page-footer-index">
         <div class="container">
           <div class="page-footer__wrapper">
             <a class="page-footer__link" href="index.html" title="Перети на главную страницу">
